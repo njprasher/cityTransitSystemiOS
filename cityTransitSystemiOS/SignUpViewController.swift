@@ -26,13 +26,38 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var btnSignUp: UIButton!
     
+    private var datePicker: UIDatePicker?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        datePicker = UIDatePicker()
+        datePicker?.maximumDate = Date()
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(SignUpViewController.dateChanged(datePicker:)), for: .valueChanged)
 
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.viewTapped(gestureRecognizer:)))
+        
+        view.addGestureRecognizer(tapGesture)
+        
+        txtDateOfBirth.inputView = datePicker
         // Do any additional setup after loading the view.
     }
     
-
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer)
+    {
+        view.endEditing(true)
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker)
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        txtDateOfBirth.text = dateFormatter.string(from: datePicker.date)
+        view.endEditing(true)
+    }
+    
     /*
     // MARK: - Navigation
 
