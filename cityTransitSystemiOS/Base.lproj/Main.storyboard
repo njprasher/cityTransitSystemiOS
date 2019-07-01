@@ -117,6 +117,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="family-name"/>
+                                                <connections>
+                                                    <action selector="endLastName:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="ZiS-nP-Bwc"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -211,6 +214,9 @@
                                 <rect key="frame" x="40" y="418" width="334" height="30"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="SignUp"/>
+                                <connections>
+                                    <action selector="signUpCheck:" destination="cgk-CH-A3j" eventType="touchUpInside" id="rkU-Bg-H6S"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

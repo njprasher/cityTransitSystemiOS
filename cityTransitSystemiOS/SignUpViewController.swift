@@ -33,6 +33,11 @@ class SignUpViewController: UIViewController {
         
         datePicker = UIDatePicker()
         datePicker?.maximumDate = Date()
+        let calendar = Calendar(identifier: .gregorian)
+        let currentDate = Date()
+        var components = DateComponents()
+        components.year = -150
+        datePicker?.minimumDate = calendar.date(byAdding: components, to: currentDate)!
         datePicker?.datePickerMode = .date
         datePicker?.addTarget(self, action: #selector(SignUpViewController.dateChanged(datePicker:)), for: .valueChanged)
 
@@ -71,11 +76,32 @@ class SignUpViewController: UIViewController {
                 let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
                 alert.addAction(actionOk)
                 self.present(alert, animated: true, completion: nil)
-                
             }
         }
-       
     }
+    
+    @IBAction func endLastName(_ sender: UITextField) {
+        if(txtLastName.text == ""){
+            let alert = UIAlertController(title: "Please enter a Last Name", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(actionOk)
+            self.present(alert, animated: true, completion: nil)
+        } else{
+            if(!(txtLastName.text?.isValidName())!){
+                let alert = UIAlertController(title: "Please enter correct Last Name", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(actionOk)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    
+    
+    @IBAction func signUpCheck(_ sender: UIButton) {
+        
+    }
+    
     
     /*
     // MARK: - Navigation
