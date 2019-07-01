@@ -1,30 +1,23 @@
 //
-//  LoginViewController.swift
+//  UserHomeViewController.swift
 //  cityTransitSystemiOS
 //
-//  Created by Neeraj Prasher on 2019-06-30.
+//  Created by Neeraj Prasher on 2019-07-01.
 //  Copyright © 2019 njprasher. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
-
-    @IBOutlet weak var txtEmail: UITextField!
+class UserHomeViewController: UIViewController {
+    @IBOutlet weak var lbltest: UILabel!
     
-    @IBOutlet weak var txtPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.lbltest.text = UserSingleton.activeRider.fullName
+        
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func btnLogin(_ sender: UIButton) {
-        if UserSingleton.riderMailExist(mail: self.txtEmail.text!){
-            let rider = UserSingleton.getRiderByMail(mail: self.txtEmail.text!)
-            UserSingleton.activeRider = rider!
-        }
     }
     
 
