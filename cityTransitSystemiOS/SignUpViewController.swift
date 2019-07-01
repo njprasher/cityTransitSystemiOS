@@ -179,6 +179,15 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpCheck(_ sender: UIButton) {
         
+        let dateformatter = DateFormatter()
+        
+        dateformatter.dateFormat = "MM/dd/YYYY"
+        
+        let dateInFormat = dateformatter.date(from: self.txtDateOfBirth.text!)
+
+        let rider = Riders(password: txtPasswordAgain.text!, firstName: txtFirstName.text!, lastName: txtLastName.text!, dateOfBirth: dateInFormat! ,email: txtEmail.text!, contact: txtContact.text!)
+        
+        UserSingleton.signUpRider(rider: rider)
     }
     
     

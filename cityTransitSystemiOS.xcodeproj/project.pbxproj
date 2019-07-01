@@ -13,6 +13,12 @@
 		4C26978122C9B64A00E83643 /* Extension_String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26978022C9B64A00E83643 /* Extension_String.swift */; };
 		4C26978322C9B69500E83643 /* Extension_Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26978222C9B69500E83643 /* Extension_Float.swift */; };
 		4C26978522C9BF5200E83643 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C26978422C9BF5200E83643 /* AppIcon.xcassets */; };
+		4C26978722C9E8F900E83643 /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26978622C9E8F900E83643 /* UserSingleton.swift */; };
+		4C26978A22C9EAA300E83643 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26978922C9EAA300E83643 /* Users.swift */; };
+		4C26978C22C9EAF800E83643 /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26978B22C9EAF800E83643 /* Admin.swift */; };
+		4C26978E22C9EB2B00E83643 /* Riders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26978D22C9EB2B00E83643 /* Riders.swift */; };
+		4C26979022C9EB3500E83643 /* Drivers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26978F22C9EB3500E83643 /* Drivers.swift */; };
+		4C26979222C9F30300E83643 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26979122C9F30300E83643 /* Routes.swift */; };
 		4C35F31A22C8751A0078460E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35F31922C8751A0078460E /* AppDelegate.swift */; };
 		4C35F31F22C8751A0078460E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F31D22C8751A0078460E /* Main.storyboard */; };
 		4C35F32122C8751B0078460E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F32022C8751B0078460E /* Assets.xcassets */; };
@@ -26,6 +32,12 @@
 		4C26978022C9B64A00E83643 /* Extension_String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_String.swift; sourceTree = "<group>"; };
 		4C26978222C9B69500E83643 /* Extension_Float.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_Float.swift; sourceTree = "<group>"; };
 		4C26978422C9BF5200E83643 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
+		4C26978622C9E8F900E83643 /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
+		4C26978922C9EAA300E83643 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		4C26978B22C9EAF800E83643 /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
+		4C26978D22C9EB2B00E83643 /* Riders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Riders.swift; sourceTree = "<group>"; };
+		4C26978F22C9EB3500E83643 /* Drivers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drivers.swift; sourceTree = "<group>"; };
+		4C26979122C9F30300E83643 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		4C35F31622C8751A0078460E /* cityTransitSystemiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cityTransitSystemiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C35F31922C8751A0078460E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C35F31E22C8751A0078460E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,6 +64,19 @@
 				4C26978222C9B69500E83643 /* Extension_Float.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4C26978822C9EA7E00E83643 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				4C26978622C9E8F900E83643 /* UserSingleton.swift */,
+				4C26978922C9EAA300E83643 /* Users.swift */,
+				4C26978D22C9EB2B00E83643 /* Riders.swift */,
+				4C26978F22C9EB3500E83643 /* Drivers.swift */,
+				4C26978B22C9EAF800E83643 /* Admin.swift */,
+				4C26979122C9F30300E83643 /* Routes.swift */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 		4C35F30D22C8751A0078460E = {
@@ -83,6 +108,7 @@
 				4C26978422C9BF5200E83643 /* AppIcon.xcassets */,
 				4C35F32222C8751B0078460E /* LaunchScreen.storyboard */,
 				4C35F32522C8751B0078460E /* Info.plist */,
+				4C26978822C9EA7E00E83643 /* Users */,
 			);
 			path = cityTransitSystemiOS;
 			sourceTree = "<group>";
@@ -159,12 +185,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C26978A22C9EAA300E83643 /* Users.swift in Sources */,
+				4C26979222C9F30300E83643 /* Routes.swift in Sources */,
+				4C26978C22C9EAF800E83643 /* Admin.swift in Sources */,
+				4C26978E22C9EB2B00E83643 /* Riders.swift in Sources */,
 				4C26978322C9B69500E83643 /* Extension_Float.swift in Sources */,
 				4C26977C22C99C8C00E83643 /* LoginViewController.swift in Sources */,
 				4C26977A22C99AF300E83643 /* RoutesViewController.swift in Sources */,
 				4C26977E22C99C9700E83643 /* SignUpViewController.swift in Sources */,
+				4C26978722C9E8F900E83643 /* UserSingleton.swift in Sources */,
 				4C35F31A22C8751A0078460E /* AppDelegate.swift in Sources */,
 				4C26978122C9B64A00E83643 /* Extension_String.swift in Sources */,
+				4C26979022C9EB3500E83643 /* Drivers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
