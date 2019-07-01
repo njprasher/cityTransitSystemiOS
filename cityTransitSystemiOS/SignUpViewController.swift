@@ -58,6 +58,25 @@ class SignUpViewController: UIViewController {
         view.endEditing(true)
     }
     
+    
+    @IBAction func endFirstName(_ sender: Any) {
+        if(txtFirstName.text == ""){
+            let alert = UIAlertController(title: "Please enter a First Name", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(actionOk)
+            self.present(alert, animated: true, completion: nil)
+        } else{
+            if(!(txtFirstName.text?.isValidName())!){
+                let alert = UIAlertController(title: "Please enter correct First Name", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(actionOk)
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+        }
+       
+    }
+    
     /*
     // MARK: - Navigation
 
