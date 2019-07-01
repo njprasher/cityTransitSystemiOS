@@ -96,6 +96,85 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    @IBAction func endDateOfBirth(_ sender: UITextField) {
+        if(txtDateOfBirth.text == ""){
+            let alert = UIAlertController(title: "Please enter Date of Birth", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(actionOk)
+            self.present(alert, animated: true, completion: nil)
+        } else{
+            if(!(txtDateOfBirth.text?.isValidDate())!){
+                let alert = UIAlertController(title: "Please enter correct Date of birth", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(actionOk)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    @IBAction func endContact(_ sender: UITextField) {
+        if(txtContact.text == ""){
+            let alert = UIAlertController(title: "Please enter Contact", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(actionOk)
+            self.present(alert, animated: true, completion: nil)
+        } else{
+            if(!(txtContact.text?.isValidContact())!){
+                let alert = UIAlertController(title: "Please enter correct Contact", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(actionOk)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    @IBAction func endEmail(_ sender: UITextField) {
+        if(txtEmail.text == ""){
+            let alert = UIAlertController(title: "Please enter Email", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(actionOk)
+            self.present(alert, animated: true, completion: nil)
+        } else{
+            if(!(txtEmail.text?.isValidEmail())!){
+                let alert = UIAlertController(title: "Please enter correct Email", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(actionOk)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    @IBAction func endPassword(_ sender: UITextField) {
+        if(txtPassword.text == ""){
+            let alert = UIAlertController(title: "Please enter Password", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(actionOk)
+            self.present(alert, animated: true, completion: nil)
+        } else{
+            if(!(txtPassword.text?.isValidPassword())!){
+                let alert = UIAlertController(title: "Password should be 8 character long with uppercase, lower case, number and a special character", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(actionOk)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    @IBAction func endPasswordAgain(_ sender: UITextField) {
+        if(txtPasswordAgain.text == ""){
+            let alert = UIAlertController(title: "Please enter Password Again", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(actionOk)
+            self.present(alert, animated: true, completion: nil)
+        } else{
+            if(txtPassword.text != txtPasswordAgain.text){
+                let alert = UIAlertController(title: "Password does not match", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(actionOk)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
     
     
     @IBAction func signUpCheck(_ sender: UIButton) {

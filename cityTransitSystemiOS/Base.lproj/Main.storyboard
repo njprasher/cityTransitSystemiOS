@@ -134,9 +134,15 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y6e-aR-MPX" userLabel="txtDateOfBirth">
                                                 <rect key="frame" x="197" y="0.0" width="197" height="30"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                </accessibility>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="given-name"/>
+                                                <connections>
+                                                    <action selector="endDateOfBirth:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="WA2-Wi-zt7"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -154,6 +160,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                                <connections>
+                                                    <action selector="endContact:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="ov3-qk-RnD"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -171,6 +180,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                                <connections>
+                                                    <action selector="endEmail:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="4AI-Dw-Hb0"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -188,6 +200,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
+                                                <connections>
+                                                    <action selector="endPassword:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="NMI-ul-5sO"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -205,6 +220,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <connections>
+                                                    <action selector="endPasswordAgain:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="Rex-Vn-G4x"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
