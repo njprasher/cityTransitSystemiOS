@@ -35,4 +35,11 @@ extension String
         let mobileTest = NSPredicate(format:"SELF MATCHES %@", mobileRegEx)
         return mobileTest.evaluate(with: self)
     }
+    
+    func isValidDate() -> Bool
+    {
+        let dateRegex = "/^(0?[1-9]|1[0-2])\\/(0?[1-9]|1\\d|2\\d|3[01])\\/(19|20)\\d{2}$/"
+        let dateTest = NSPredicate(format:"SELF MATCHES %@", dateRegex)
+        return dateTest.evaluate(with: self)
+    }
 }
