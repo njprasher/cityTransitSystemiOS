@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTR-as-Hkw">
-                                <rect key="frame" x="10" y="194" width="394" height="21"/>
+                                <rect key="frame" x="10" y="94" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -29,13 +29,11 @@
                         <constraints>
                             <constraint firstItem="KTR-as-Hkw" firstAttribute="leading" secondItem="f1B-hs-dsy" secondAttribute="leading" constant="10" id="hLG-Ts-JIt"/>
                             <constraint firstItem="KTR-as-Hkw" firstAttribute="centerX" secondItem="uAM-rl-lht" secondAttribute="centerX" id="nwT-Gv-w79"/>
-                            <constraint firstItem="KTR-as-Hkw" firstAttribute="top" secondItem="f1B-hs-dsy" secondAttribute="top" constant="150" id="thy-sq-ws8"/>
+                            <constraint firstItem="KTR-as-Hkw" firstAttribute="top" secondItem="f1B-hs-dsy" secondAttribute="top" constant="50" id="wci-pe-heI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f1B-hs-dsy"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wwu-JV-dQo">
-                        <barButtonItem key="backBarButtonItem" title="Logout" id="qD0-t6-vnw"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="wwu-JV-dQo"/>
                     <connections>
                         <outlet property="lbltest" destination="KTR-as-Hkw" id="2je-ML-ZSI"/>
                     </connections>

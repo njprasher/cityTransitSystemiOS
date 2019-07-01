@@ -11,11 +11,30 @@ import UIKit
 class UserHomeViewController: UIViewController {
     @IBOutlet weak var lbltest: UILabel!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        var timeOfDay: String{
+            let date = Date()
+            let calendar = Calendar.current
+            let hour = calendar.component(.hour, from: date)
+            if hour >= 5 && hour < 12{
+                return "Morning"
+            } else{
+                if hour >= 12 && hour < 17{
+                    return "Afternoon"
+                }else{
+                    if hour >= 17 && hour < 21{
+                        return "Evening"
+                    }else{
+                        return "Night"
+                    }
+                }
+            }
+        }
         
-        self.lbltest.text = UserSingleton.activeRider.fullName
+        
+        self.lbltest.text = "Hi \(UserSingleton.activeRider.fullName) Good \(timeOfDay)"
         
         // Do any additional setup after loading the view.
     }

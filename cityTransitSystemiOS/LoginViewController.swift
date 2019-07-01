@@ -24,6 +24,12 @@ class LoginViewController: UIViewController {
         if UserSingleton.riderMailExist(mail: self.txtEmail.text!){
             let rider = UserSingleton.getRiderByMail(mail: self.txtEmail.text!)
             UserSingleton.activeRider = rider!
+        }else{
+            let alert = UIAlertController(title: "Invalid Credentials", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                    let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                    alert.addAction(actionOk)
+                    self.present(alert, animated: true, completion: nil)
+                }
         }
     }
     
@@ -37,5 +43,3 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
