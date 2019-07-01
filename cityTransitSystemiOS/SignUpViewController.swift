@@ -188,6 +188,11 @@ class SignUpViewController: UIViewController {
         let rider = Riders(password: txtPasswordAgain.text!, firstName: txtFirstName.text!, lastName: txtLastName.text!, dateOfBirth: dateInFormat! ,email: txtEmail.text!, contact: txtContact.text!)
         
         UserSingleton.signUpRider(rider: rider)
+        
+        let alert = UIAlertController(title: "Hi, \(rider.fullName), you are successfully signed up", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+        let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+        alert.addAction(actionOk)
+        self.present(alert, animated: true, completion: nil)
     }
     
     

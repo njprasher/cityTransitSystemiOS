@@ -15,6 +15,8 @@ class UserSingleton: Users {
     //Driver Dictionary
     private static var dictDrivers=[String:Drivers]()
     
+    static var activeRider = Riders()
+    
     static func signUpRider(rider: Riders)
     {
         dictRiders.updateValue(rider, forKey: rider.id!)
@@ -24,4 +26,28 @@ class UserSingleton: Users {
     {
         dictDrivers.updateValue(driver, forKey: driver.id!)
     }
+    
+    static func getRiderByMail(mail: String) -> Riders?{
+        for rider in dictRiders{
+            if rider.value.email == mail{
+                return rider.value
+            }else{
+                return nil
+            }
+        }
+        return nil
+    }
+    
+    static func riderMailExist(mail: String) -> Bool{
+        for rider in dictRiders{
+            if rider.value.email == mail{
+                return true
+            }else{
+                return false
+            }
+        }
+        return false
+    }
+    
+    
 }

@@ -323,6 +323,9 @@
                                 <rect key="frame" x="10" y="478" width="394" height="30"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="btnLogin:" destination="HuS-rE-0Dc" eventType="touchUpInside" id="Oaw-Dz-V7Z"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="FdQ-gN-Zqb">
                                 <rect key="frame" x="20" y="128" width="374" height="140"/>
@@ -344,6 +347,10 @@
                         <viewLayoutGuide key="safeArea" id="VD0-v2-d9h"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="mbt-sL-piB"/>
+                    <connections>
+                        <outlet property="txtEmail" destination="dbM-Hd-Poj" id="jIj-0d-Sfw"/>
+                        <outlet property="txtPassword" destination="fyg-0h-oTy" id="lFN-9X-o9h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjU-FH-3FJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

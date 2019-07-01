@@ -10,10 +10,26 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var txtEmail: UITextField!
+    
+    @IBOutlet weak var txtPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func btnLogin(_ sender: UIButton) {
+        if UserSingleton.riderMailExist(mail: self.txtEmail.text!){
+            let rider = UserSingleton.getRiderByMail(mail: self.txtEmail.text!)
+            UserSingleton.activeRider = rider!
+            
+            let alert = UIAlertController(title: "Hi, \(UserSingleton.activeRider.fullName). You are successfully Logged In", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(actionOk)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
 
