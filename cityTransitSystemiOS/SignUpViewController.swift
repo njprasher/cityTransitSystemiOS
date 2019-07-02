@@ -179,31 +179,43 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpCheck(_ sender: UIButton) {
         
-        let dateformatter = DateFormatter()
-        
-        dateformatter.dateFormat = "MM/dd/YYYY"
-        
-        let dateInFormat = dateformatter.date(from: self.txtDateOfBirth.text!)
-
-        let rider = Riders(password: txtPasswordAgain.text!, firstName: txtFirstName.text!, lastName: txtLastName.text!, dateOfBirth: dateInFormat! ,email: txtEmail.text!, contact: txtContact.text!)
-        
-        UserSingleton.signUpRider(rider: rider)
-        
-        let alert = UIAlertController(title: "Hi, \(rider.fullName), you are successfully signed up", message: "", preferredStyle: UIAlertController.Style.actionSheet)
-        let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
-        alert.addAction(actionOk)
-        self.present(alert, animated: true, completion: nil)
+        if UserSingleton.riderMailExist(mail: txtEmail.text!) {
+            let alert = UIAlertController(title: "\(txtEmail.text!) already in use", message: "Try a different one", preferredStyle: UIAlertController.Style.actionSheet)
+            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+            alert.addAction(actionOk)
+            self.present(alert, animated: true, completion: nil)
+        } else{
+            if UserSingleton.riderContactExist(contact: txtContact.text!){
+                let alert = UIAlertController(title: "\(txtContact.text!) already in use", message: "Try a different one", preferredStyle: UIAlertController.Style.actionSheet)
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(actionOk)
+                self.present(alert, animated: true, completion: nil)
+            } else{
+                let dateformatter = DateFormatter()
+                
+                dateformatter.dateFormat = "MM/dd/YYYY"
+                
+                let dateInFormat = dateformatter.date(from: self.txtDateOfBirth.text!)
+                
+                let rider = Riders(password: txtPasswordAgain.text!, firstName: txtFirstName.text!, lastName: txtLastName.text!, dateOfBirth: dateInFormat! ,email: txtEmail.text!, contact: txtContact.text!)
+                
+                UserSingleton.signUpRider(rider: rider)
+                
+                let alert = UIAlertController(title: "Hi, \(rider.fullName), you are successfully signed up", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(actionOk)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destination.
+ // Pass the selected object to the new view controller.
+ }
+ */
