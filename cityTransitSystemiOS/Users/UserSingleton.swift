@@ -49,5 +49,16 @@ class UserSingleton: Users {
         return false
     }
     
+    static func riderContactExist(contact: String) -> Bool{
+        for rider in dictRiders{
+            if rider.value.contact == contact{
+                return true
+            }else{
+                return false
+            }
+        }
+        return false
+    }
+    
     
 }
