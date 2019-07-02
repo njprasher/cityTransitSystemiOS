@@ -24,22 +24,17 @@ class UserHomeViewController: UIViewController {
                 if hour >= 12 && hour < 17{
                     return "Afternoon"
                 }else{
-                    if hour >= 17 && hour < 21{
                         return "Evening"
-                    }else{
-                        return "Night"
                     }
                 }
             }
-        }
-        
         
         self.lbltest.text = "Hi \(UserSingleton.activeRider.fullName) Good \(timeOfDay)"
         
         // Do any additional setup after loading the view.
     }
     
-
+}
     /*
     // MARK: - Navigation
 
@@ -49,5 +44,3 @@ class UserHomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
