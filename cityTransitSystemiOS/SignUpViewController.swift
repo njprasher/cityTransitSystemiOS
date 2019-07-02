@@ -63,8 +63,9 @@ class SignUpViewController: UIViewController {
         view.endEditing(true)
     }
     
+    //func to check valid First Name in input
     
-    @IBAction func endFirstName(_ sender: Any) {
+    func checkFirstName(){
         if(txtFirstName.text == ""){
             let alert = UIAlertController(title: "Please enter a First Name", message: "", preferredStyle: UIAlertController.Style.actionSheet)
             let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
@@ -80,7 +81,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func endLastName(_ sender: UITextField) {
+    //func to check valid Last Name in input
+    
+    func checkLastName(){
         if(txtLastName.text == ""){
             let alert = UIAlertController(title: "Please enter a Last Name", message: "", preferredStyle: UIAlertController.Style.actionSheet)
             let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
@@ -96,7 +99,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func endDateOfBirth(_ sender: UITextField) {
+    //func to check valid Date of birth in input
+    
+    func checkDateOfBirth(){
         if(txtDateOfBirth.text == ""){
             let alert = UIAlertController(title: "Please enter Date of Birth", message: "", preferredStyle: UIAlertController.Style.actionSheet)
             let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
@@ -112,7 +117,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func endContact(_ sender: UITextField) {
+    //func to check valid Contact in Input
+    
+    func checkContact(){
         if(txtContact.text == ""){
             let alert = UIAlertController(title: "Please enter Contact", message: "", preferredStyle: UIAlertController.Style.actionSheet)
             let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
@@ -128,7 +135,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func endEmail(_ sender: UITextField) {
+    //func to check valid email in input
+    
+    func checkEmail(){
         if(txtEmail.text == ""){
             let alert = UIAlertController(title: "Please enter Email", message: "", preferredStyle: UIAlertController.Style.actionSheet)
             let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
@@ -144,7 +153,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func endPassword(_ sender: UITextField) {
+    //func to check valid password in input
+    
+    func checkPassword(){
         if(txtPassword.text == ""){
             let alert = UIAlertController(title: "Please enter Password", message: "", preferredStyle: UIAlertController.Style.actionSheet)
             let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
@@ -160,7 +171,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    @IBAction func endPasswordAgain(_ sender: UITextField) {
+    //func to check password matches in input
+    
+    func checkPasswordAgain(){
         if(txtPasswordAgain.text == ""){
             let alert = UIAlertController(title: "Please enter Password Again", message: "", preferredStyle: UIAlertController.Style.actionSheet)
             let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
@@ -176,8 +189,51 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    //check all
+    
+    func checkAll(){
+        self.checkFirstName()
+        self.checkLastName()
+        self.checkDateOfBirth()
+        self.checkContact()
+        self.checkEmail()
+        self.checkPassword()
+        self.checkPasswordAgain()
+    }
+    
+    //implementing checks
+    
+    @IBAction func endFirstName(_ sender: Any) {
+        self.checkFirstName()
+    }
+    
+    @IBAction func endLastName(_ sender: UITextField) {
+      self.checkLastName()
+    }
+    
+    @IBAction func endDateOfBirth(_ sender: UITextField) {
+       self.checkDateOfBirth()
+    }
+    
+    @IBAction func endContact(_ sender: UITextField) {
+       self.checkContact()
+    }
+    
+    @IBAction func endEmail(_ sender: UITextField) {
+       self.checkEmail()
+    }
+    
+    @IBAction func endPassword(_ sender: UITextField) {
+        self.checkPassword()
+    }
+    
+    @IBAction func endPasswordAgain(_ sender: UITextField) {
+        self.checkPasswordAgain()
+    }
+    
     
     @IBAction func signUpCheck(_ sender: UIButton) {
+        self.checkAll()
         
         if UserSingleton.riderMailExist(mail: txtEmail.text!) {
             let alert = UIAlertController(title: "\(txtEmail.text!) already in use", message: "Try a different one", preferredStyle: UIAlertController.Style.actionSheet)
