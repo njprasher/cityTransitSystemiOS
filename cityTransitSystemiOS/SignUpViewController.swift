@@ -26,7 +26,34 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var btnSignUp: UIButton!
     
+    //convert String to Date
+    func stringToDate(string: String) -> Date{
+        let dateformatter = DateFormatter()
+        
+        dateformatter.dateFormat = "MM/dd/YYYY"
+        
+        let dateInFormat = dateformatter.date(from: string)
+        
+        return dateInFormat!
+    }
+    
+    //convert Date to String
+    func dateToString(date: Date) -> String{
+        let dateformatter = DateFormatter()
+        
+        dateformatter.dateFormat = "MM/dd/YYYY"
+        
+        let stringInFormat = dateformatter.string(from: date)
+        
+        return stringInFormat
+    }
+    
+    
     private var datePicker: UIDatePicker?
+    
+    //variable to store current date
+    
+    var datePrevious = ""
     
     //func to add done and cancel UIToolbar to the UIDatePicker
     
@@ -40,11 +67,13 @@ class SignUpViewController: UIViewController {
         toolBar.sizeToFit()
         
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: myCancel)
+        
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: myDone)
         
-        
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        
         toolBar.isUserInteractionEnabled = true
         
         return toolBar
@@ -64,6 +93,7 @@ class SignUpViewController: UIViewController {
         components.year = -150
         datePicker?.minimumDate = calendar.date(byAdding: components, to: currentDate)!
         datePicker?.datePickerMode = .date
+        
         datePicker?.addTarget(self, action: #selector(SignUpViewController.dateChanged(datePicker:)), for: .valueChanged)
 
         
@@ -93,21 +123,21 @@ class SignUpViewController: UIViewController {
     @objc func dateChanged(datePicker: UIDatePicker)
     {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateFormat = "MM/dd/YYYY"
         txtDateOfBirth.text = dateFormatter.string(from: datePicker.date)
     }
     
     //func to dismiss picker when done or cancel pressed
     
     @objc func dismissByCancel() {
+        txtDateOfBirth.text = self.datePrevious
         view.endEditing(true)
     }
     
     @objc func dismissByDone() {
+        self.datePrevious = txtDateOfBirth.text ?? "\(self.dateToString(date: Date()))"
         view.endEditing(true)
     }
-    
-    
     
     //func to check valid First Name in input
     
@@ -245,17 +275,6 @@ class SignUpViewController: UIViewController {
         self.checkEmail()
         self.checkPassword()
         self.checkPasswordAgain()
-    }
-    
-    //convert String to Date
-    func stringToDate(String: String) -> Date{
-        let dateformatter = DateFormatter()
-        
-        dateformatter.dateFormat = "MM/dd/YYYY"
-        
-        let dateInFormat = dateformatter.date(from: String)
-        
-        return dateInFormat!
     }
     
     //implementing checks
