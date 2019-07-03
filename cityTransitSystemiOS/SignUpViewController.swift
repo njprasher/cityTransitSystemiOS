@@ -311,7 +311,11 @@ class SignUpViewController: UIViewController {
     @IBAction func signUpCheck(_ sender: UIButton) {
         self.checkAll()
         
-        if UserSingleton.riderMailExist(mail: txtEmail.text!) {
+        //changed email to lower case to make email consistent
+        
+        let lowerCasedEmail = txtEmail.text!.lowercased()
+        
+        if UserSingleton.riderMailExist(mail: lowerCasedEmail) {
             let alert = UIAlertController(title: "\(txtEmail.text!) already in use", message: "Try a different one", preferredStyle: UIAlertController.Style.actionSheet)
             let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
             alert.addAction(actionOk)
@@ -323,7 +327,7 @@ class SignUpViewController: UIViewController {
                 alert.addAction(actionOk)
                 self.present(alert, animated: true, completion: nil)
             } else{
-                let rider = Riders(password: txtPasswordAgain.text ?? "", firstName: txtFirstName.text!, lastName: txtLastName.text!, dateOfBirth: txtDateOfBirth.text!,email: txtEmail.text!, contact: txtContact.text!)
+                let rider = Riders(password: txtPasswordAgain.text ?? "", firstName: txtFirstName.text!, lastName: txtLastName.text!, dateOfBirth: txtDateOfBirth.text!,email: lowerCasedEmail, contact: txtContact.text!)
                 
                 UserSingleton.signUpRider(rider: rider)
                 
