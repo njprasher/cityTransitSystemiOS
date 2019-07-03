@@ -14,7 +14,7 @@ class Users
     private var _password = String()
     var firstName: String
     var lastName: String
-    var dateOfBirth: Date
+    var dateOfBirth: String
     var email: String
     var contact: String
     
@@ -23,7 +23,7 @@ class Users
         self.id = String()
         self.firstName = String()
         self.lastName = String()
-        self.dateOfBirth = Date()
+        self.dateOfBirth = String()
         self.email = String()
         self.contact = String()
     }
@@ -40,7 +40,7 @@ class Users
         self._password = password
     }
     
-    init(password: String, firstName: String, lastName: String, dateOfBirth: Date, email: String, contact: String)
+    init(password: String, firstName: String, lastName: String, dateOfBirth: String, email: String, contact: String)
     {   self.id = String(Int.random(in: 1...100000000))
         self._password = password
         self.firstName = firstName

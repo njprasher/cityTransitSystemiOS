@@ -20,7 +20,7 @@ class Drivers: Users
         super.init()
     }
     
-    init(password: String, firstName: String, lastName: String, dateOfBirth: Date, email: String, contact: String, busNumber: String)
+    init(password: String, firstName: String, lastName: String, dateOfBirth: String, email: String, contact: String, busNumber: String)
     {
         self.busNumber = busNumber
         super.init(password: password, firstName: firstName, lastName: lastName, dateOfBirth: dateOfBirth, email: email, contact: contact)

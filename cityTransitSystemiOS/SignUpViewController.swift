@@ -31,6 +31,8 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //creating datePicker
+        
         datePicker = UIDatePicker()
         datePicker?.maximumDate = Date()
         let calendar = Calendar(identifier: .gregorian)
@@ -201,6 +203,17 @@ class SignUpViewController: UIViewController {
         self.checkPasswordAgain()
     }
     
+    //convert String to Date
+    func stringToDate(String: String) -> Date{
+        let dateformatter = DateFormatter()
+        
+        dateformatter.dateFormat = "MM/dd/YYYY"
+        
+        let dateInFormat = dateformatter.date(from: String)
+        
+        return dateInFormat!
+    }
+    
     //implementing checks
     
     @IBAction func endFirstName(_ sender: Any) {
@@ -247,13 +260,7 @@ class SignUpViewController: UIViewController {
                 alert.addAction(actionOk)
                 self.present(alert, animated: true, completion: nil)
             } else{
-                let dateformatter = DateFormatter()
-                
-                dateformatter.dateFormat = "MM/dd/YYYY"
-                
-                let dateInFormat = dateformatter.date(from: self.txtDateOfBirth.text!)
-                
-                let rider = Riders(password: txtPasswordAgain.text!, firstName: txtFirstName.text!, lastName: txtLastName.text!, dateOfBirth: dateInFormat! ,email: txtEmail.text!, contact: txtContact.text!)
+                let rider = Riders(password: txtPasswordAgain.text ?? "", firstName: txtFirstName.text!, lastName: txtLastName.text!, dateOfBirth: txtDateOfBirth.text!,email: txtEmail.text!, contact: txtContact.text!)
                 
                 UserSingleton.signUpRider(rider: rider)
                 
