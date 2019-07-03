@@ -13,7 +13,7 @@
         <!--RoutesVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="RoutesVC" id="BYZ-38-t0r" customClass="RoutesViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RoutesVC" title="RoutesVC" id="BYZ-38-t0r" customClass="RoutesViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,7 @@
         <!--SignUpVC-->
         <scene sceneID="Hhf-HZ-hyE">
             <objects>
-                <viewController title="SignUpVC" id="cgk-CH-A3j" customClass="SignUpViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpVC" title="SignUpVC" id="cgk-CH-A3j" customClass="SignUpViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oKT-xg-gEG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,7 +250,7 @@
         <!--LoginVC-->
         <scene sceneID="Odt-hy-SYH">
             <objects>
-                <viewController title="LoginVC" id="HuS-rE-0Dc" customClass="LoginViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" title="LoginVC" id="HuS-rE-0Dc" customClass="LoginViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TkC-vS-259">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
