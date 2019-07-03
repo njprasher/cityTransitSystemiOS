@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
     @IBAction func btnLogin(_ sender: UIButton) {
         let lowerCasedEmail = txtEmail.text!.lowercased()
         
-        if UserSingleton.riderMailExist(mail: self.txtEmail.text!){
+        if UserSingleton.riderMailExist(mail: lowerCasedEmail){
             let rider = UserSingleton.getRiderByMail(mail: lowerCasedEmail)
             UserSingleton.activeRider = rider!
         }else{
