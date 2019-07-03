@@ -28,6 +28,28 @@ class SignUpViewController: UIViewController {
     
     private var datePicker: UIDatePicker?
     
+    //func to add done and cancel UIToolbar to the UIDatePicker
+    
+    func ToolbarPicker (myCancel : Selector, myDone: Selector) -> UIToolbar {
+        
+        let toolBar = UIToolbar()
+        
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor.black
+        toolBar.sizeToFit()
+        
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: myCancel)
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.plain, target: self, action: myDone)
+        
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        return toolBar
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +57,7 @@ class SignUpViewController: UIViewController {
         
         datePicker = UIDatePicker()
         datePicker?.maximumDate = Date()
+        
         let calendar = Calendar(identifier: .gregorian)
         let currentDate = Date()
         var components = DateComponents()
@@ -48,22 +71,43 @@ class SignUpViewController: UIViewController {
         
         view.addGestureRecognizer(tapGesture)
         
+        //added toolbar with done and cancel button
+        
+        let toolBar = ToolbarPicker(myCancel: #selector(self.dismissByCancel), myDone: #selector(self.dismissByDone))
+        
+        txtDateOfBirth.inputAccessoryView = toolBar
+
         txtDateOfBirth.inputView = datePicker
         // Do any additional setup after loading the view.
     }
+    
+    //func to check if tapped on view
     
     @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer)
     {
         view.endEditing(true)
     }
     
+    //func to check if date changed
+    
     @objc func dateChanged(datePicker: UIDatePicker)
     {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         txtDateOfBirth.text = dateFormatter.string(from: datePicker.date)
+    }
+    
+    //func to dismiss picker when done or cancel pressed
+    
+    @objc func dismissByCancel() {
         view.endEditing(true)
     }
+    
+    @objc func dismissByDone() {
+        view.endEditing(true)
+    }
+    
+    
     
     //func to check valid First Name in input
     
