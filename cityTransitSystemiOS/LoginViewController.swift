@@ -21,8 +21,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
+        let lowerCasedEmail = txtEmail.text!.lowercased()
+        
         if UserSingleton.riderMailExist(mail: self.txtEmail.text!){
-            let rider = UserSingleton.getRiderByMail(mail: self.txtEmail.text!)
+            let rider = UserSingleton.getRiderByMail(mail: lowerCasedEmail)
             UserSingleton.activeRider = rider!
         }else{
             let alert = UIAlertController(title: "Invalid Credentials", message: "", preferredStyle: UIAlertController.Style.actionSheet)
