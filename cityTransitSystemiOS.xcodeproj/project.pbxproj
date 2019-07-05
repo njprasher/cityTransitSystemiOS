@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,10 +21,12 @@
 		4C26979222C9F30300E83643 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26979122C9F30300E83643 /* Routes.swift */; };
 		4C26979422CA066600E83643 /* PostLoginFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C26979322CA066600E83643 /* PostLoginFlow.storyboard */; };
 		4C26979622CA087F00E83643 /* UserHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26979522CA087F00E83643 /* UserHomeViewController.swift */; };
+		4C27C3AE22CF4E23000753A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C27C3AD22CF4E23000753A2 /* GoogleService-Info.plist */; };
 		4C35F31A22C8751A0078460E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35F31922C8751A0078460E /* AppDelegate.swift */; };
 		4C35F31F22C8751A0078460E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F31D22C8751A0078460E /* Main.storyboard */; };
 		4C35F32122C8751B0078460E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F32022C8751B0078460E /* Assets.xcassets */; };
 		4C35F32422C8751B0078460E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F32222C8751B0078460E /* LaunchScreen.storyboard */; };
+		EC885AB0C7B1A4E41666FB4F /* Pods_cityTransitSystemiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,12 +44,16 @@
 		4C26979122C9F30300E83643 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		4C26979322CA066600E83643 /* PostLoginFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostLoginFlow.storyboard; sourceTree = "<group>"; };
 		4C26979522CA087F00E83643 /* UserHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeViewController.swift; sourceTree = "<group>"; };
+		4C27C3AD22CF4E23000753A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C35F31622C8751A0078460E /* cityTransitSystemiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cityTransitSystemiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C35F31922C8751A0078460E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C35F31E22C8751A0078460E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C35F32022C8751B0078460E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C35F32322C8751B0078460E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C35F32522C8751B0078460E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88447D7D166B8CD8A878B93B /* Pods-cityTransitSystemiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityTransitSystemiOS.release.xcconfig"; path = "Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS.release.xcconfig"; sourceTree = "<group>"; };
+		B82B28E481095632C4DB2186 /* Pods-cityTransitSystemiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityTransitSystemiOS.debug.xcconfig"; path = "Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cityTransitSystemiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +61,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC885AB0C7B1A4E41666FB4F /* Pods_cityTransitSystemiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		316483B6469CC4077488987B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4C26977F22C9B62C00E83643 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +103,8 @@
 			children = (
 				4C35F31822C8751A0078460E /* cityTransitSystemiOS */,
 				4C35F31722C8751A0078460E /* Products */,
+				7B66F21A50E9A0EDDB883158 /* Pods */,
+				316483B6469CC4077488987B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,12 +128,22 @@
 				4C35F32022C8751B0078460E /* Assets.xcassets */,
 				4C26978422C9BF5200E83643 /* AppIcon.xcassets */,
 				4C35F32222C8751B0078460E /* LaunchScreen.storyboard */,
+				4C27C3AD22CF4E23000753A2 /* GoogleService-Info.plist */,
 				4C35F32522C8751B0078460E /* Info.plist */,
 				4C26978822C9EA7E00E83643 /* Users */,
 				4C26979322CA066600E83643 /* PostLoginFlow.storyboard */,
 				4C26979522CA087F00E83643 /* UserHomeViewController.swift */,
 			);
 			path = cityTransitSystemiOS;
+			sourceTree = "<group>";
+		};
+		7B66F21A50E9A0EDDB883158 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B82B28E481095632C4DB2186 /* Pods-cityTransitSystemiOS.debug.xcconfig */,
+				88447D7D166B8CD8A878B93B /* Pods-cityTransitSystemiOS.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C35F32822C8751B0078460E /* Build configuration list for PBXNativeTarget "cityTransitSystemiOS" */;
 			buildPhases = (
+				55792722B90B72100AF11ABC /* [CP] Check Pods Manifest.lock */,
 				4C35F31222C8751A0078460E /* Sources */,
 				4C35F31322C8751A0078460E /* Frameworks */,
 				4C35F31422C8751A0078460E /* Resources */,
+				BD992DBFF35985B6B0AF1C67 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,10 +211,53 @@
 				4C35F32122C8751B0078460E /* Assets.xcassets in Resources */,
 				4C26978522C9BF5200E83643 /* AppIcon.xcassets in Resources */,
 				4C35F31F22C8751A0078460E /* Main.storyboard in Resources */,
+				4C27C3AE22CF4E23000753A2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55792722B90B72100AF11ABC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cityTransitSystemiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD992DBFF35985B6B0AF1C67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C35F31222C8751A0078460E /* Sources */ = {
@@ -348,6 +420,7 @@
 		};
 		4C35F32922C8751B0078460E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B82B28E481095632C4DB2186 /* Pods-cityTransitSystemiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +439,7 @@
 		};
 		4C35F32A22C8751B0078460E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88447D7D166B8CD8A878B93B /* Pods-cityTransitSystemiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

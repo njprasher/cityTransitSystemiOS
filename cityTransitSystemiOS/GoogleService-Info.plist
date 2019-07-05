@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>624414352542-nh2lvttbg2mv4u86ap4ppdo1pjds8ueq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.624414352542-nh2lvttbg2mv4u86ap4ppdo1pjds8ueq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDSXX_ZuSkKZIKbrgNs3LnQsu5qOIRafE4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>624414352542</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.njprasher.cityTransitSystemiOS</string>
+	<key>PROJECT_ID</key>
+	<string>routesnj</string>
+	<key>STORAGE_BUCKET</key>
+	<string>routesnj.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:624414352542:ios:a6361145160b31fd</string>
+	<key>DATABASE_URL</key>
+	<string>https://routesnj.firebaseio.com</string>
+</dict>
+</plist>
