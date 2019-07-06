@@ -322,10 +322,31 @@ class SignUpViewController: UIViewController {
         
         Auth.auth().createUser(withEmail: lowerCasedEmail, password: self.txtPasswordAgain.text!) { authResult, error in
             if error == nil{
-                
+                let alert = UIAlertController(title: "Hi, \(lowerCasedEmail) you are successfully signed up", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(actionOk)
+                let actionLogin = UIAlertAction(title: "Login", style: UIAlertAction.Style.default, handler: { (actionLogin) in
+                    
+//                    let sb = UIStoryboard(name: "Main", bundle: nil)
+//
+//                    let loginVC = sb.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+//
+//                    self.present(loginVC, animated: false, completion: nil)
+                    
+                    //perform segue pushes another vc and thus the user can go back to the previous screen
+                    
+                    self.performSegue(withIdentifier: "LoginViaAction", sender: nil)
+                    
+                })
+                alert.addAction(actionLogin)
+                self.present(alert, animated: true, completion: nil)
+            } else
+            {
+                self.handleError(error!)   // use the handleError method
             }
             // ... creating new user with email and password and can handle errors over here
         }
+
         
 //        if UserSingleton.riderMailExist(mail: lowerCasedEmail) {
 //            let alert = UIAlertController(title: "\(txtEmail.text!) already in use", message: "Try a different one", preferredStyle: UIAlertController.Style.actionSheet)
@@ -350,6 +371,48 @@ class SignUpViewController: UIViewController {
 //            }
 //        }
     }
+}
+
+
+extension AuthErrorCode {
+    var errorMessage: String {
+        switch self {
+        case .emailAlreadyInUse:
+            return "The email is already in use with another account"
+        case .userNotFound:
+            return "Account not found for the specified user. Please check and try again"
+        case .userDisabled:
+            return "Your account has been disabled. Please contact support."
+        case .invalidEmail, .invalidSender, .invalidRecipientEmail:
+            return "Please enter a valid email"
+        case .networkError:
+            return "Network error. Please try again."
+        case .weakPassword:
+            return "Your password is too weak. The password must be 6 characters long or more."
+        case .wrongPassword:
+            return "Your password is incorrect. Please try again or use 'Forgot password' to reset your password"
+        default:
+            return "Unknown error occurred"
+        }
+    }
+}
+
+
+extension UIViewController{
+    func handleError(_ error: Error) {
+        if let errorCode = AuthErrorCode(rawValue: error._code) {
+            print(errorCode.errorMessage)
+            let alert = UIAlertController(title: "Error", message: errorCode.errorMessage, preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            
+            alert.addAction(okAction)
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+    }
+    
 }
 
 /*

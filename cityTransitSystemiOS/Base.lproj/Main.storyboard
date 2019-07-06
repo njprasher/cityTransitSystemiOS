@@ -223,6 +223,7 @@
                         <outlet property="txtLastName" destination="pgH-Xp-uAN" id="A4C-Tz-5LV"/>
                         <outlet property="txtPassword" destination="yVt-Mp-CXy" id="6pm-qo-W5q"/>
                         <outlet property="txtPasswordAgain" destination="eMc-xm-3wq" id="7D1-Zf-nVl"/>
+                        <segue destination="HuS-rE-0Dc" kind="show" identifier="LoginViaAction" id="fht-cg-4j8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYE-Nw-IpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,4 +336,7 @@
     <resources>
         <image name="iTunesArtwork" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fht-cg-4j8"/>
+    </inferredMetricsTieBreakers>
 </document>
