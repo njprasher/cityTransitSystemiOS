@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var txtEmail: UITextField!
@@ -23,15 +23,34 @@ class LoginViewController: UIViewController {
     @IBAction func btnLogin(_ sender: UIButton) {
         let lowerCasedEmail = txtEmail.text!.lowercased()
         
-        if UserSingleton.riderMailExist(mail: lowerCasedEmail){
-            let rider = UserSingleton.getRiderByMail(mail: lowerCasedEmail)
-            UserSingleton.activeRider = rider!
-        }else{
-            let alert = UIAlertController(title: "Invalid Credentials", message: "", preferredStyle: UIAlertController.Style.actionSheet)
-                    let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
-                    alert.addAction(actionOk)
-                    self.present(alert, animated: true, completion: nil)
+        Auth.auth().signIn(withEmail: lowerCasedEmail, password: self.txtPassword.text!) { [weak self] user, error in
+            //guard let strongSelf = self else { return }
+            // ...
+            if error == nil{
+                let sb = UIStoryboard(name: "PostLoginFlow", bundle: nil)
+                
+                let userHomeVC = sb.instantiateViewController(withIdentifier: "UserHomeVC") as! UserHomeViewController
+                
+                self?.present(userHomeVC, animated: true, completion: nil)
+                
+                } else {
+                let alert = UIAlertController(title: "Invalid Credentials", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(actionOk)
+                self!.present(alert, animated: true, completion: nil)
                 }
+            
+        }
+        
+//        if UserSingleton.riderMailExist(mail: lowerCasedEmail){
+//            let rider = UserSingleton.getRiderByMail(mail: lowerCasedEmail)
+//            UserSingleton.activeRider = rider!
+//        }else{
+//            let alert = UIAlertController(title: "Invalid Credentials", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+//                    let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+//                    alert.addAction(actionOk)
+//                    self.present(alert, animated: true, completion: nil)
+//                }
         }
     }
 

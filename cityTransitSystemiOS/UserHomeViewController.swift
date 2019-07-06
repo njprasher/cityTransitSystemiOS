@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class UserHomeViewController: UIViewController {
     @IBOutlet weak var lbltest: UILabel!
@@ -34,7 +35,17 @@ class UserHomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func btnLogout(_ sender: UIBarButtonItem) {
+        try! Auth.auth().signOut()
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        let loginVC = sb.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+        
+        self.present(loginVC, animated: false, completion: nil)
+        }
 }
+
     /*
     // MARK: - Navigation
 

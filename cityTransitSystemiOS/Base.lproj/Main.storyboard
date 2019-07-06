@@ -290,7 +290,6 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="btnLogin:" destination="HuS-rE-0Dc" eventType="touchUpInside" id="Oaw-Dz-V7Z"/>
-                                    <segue destination="7EW-lB-eny" kind="show" id="jhN-2l-qAM"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="FdQ-gN-Zqb">

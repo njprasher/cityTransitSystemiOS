@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
 
@@ -25,6 +26,11 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var txtPasswordAgain: UITextField!
     
     @IBOutlet weak var btnSignUp: UIButton!
+    
+    
+    // to handle firebase exceptions
+    
+    var handle: AuthStateDidChangeListenerHandle?
     
     //convert String to Date
     func stringToDate(string: String) -> Date{
@@ -309,34 +315,40 @@ class SignUpViewController: UIViewController {
     
     
     @IBAction func signUpCheck(_ sender: UIButton) {
-        self.checkAll()
         
         //changed email to lower case to make email consistent
         
         let lowerCasedEmail = txtEmail.text!.lowercased()
         
-        if UserSingleton.riderMailExist(mail: lowerCasedEmail) {
-            let alert = UIAlertController(title: "\(txtEmail.text!) already in use", message: "Try a different one", preferredStyle: UIAlertController.Style.actionSheet)
-            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
-            alert.addAction(actionOk)
-            self.present(alert, animated: true, completion: nil)
-        } else{
-            if UserSingleton.riderContactExist(contact: txtContact.text!){
-                let alert = UIAlertController(title: "\(txtContact.text!) already in use", message: "Try a different one", preferredStyle: UIAlertController.Style.actionSheet)
-                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
-                alert.addAction(actionOk)
-                self.present(alert, animated: true, completion: nil)
-            } else{
-                let rider = Riders(password: txtPasswordAgain.text ?? "", firstName: txtFirstName.text!, lastName: txtLastName.text!, dateOfBirth: txtDateOfBirth.text!,email: lowerCasedEmail, contact: txtContact.text!)
+        Auth.auth().createUser(withEmail: lowerCasedEmail, password: self.txtPasswordAgain.text!) { authResult, error in
+            if error == nil{
                 
-                UserSingleton.signUpRider(rider: rider)
-                
-                let alert = UIAlertController(title: "Hi, \(rider.fullName), you are successfully signed up", message: "", preferredStyle: UIAlertController.Style.actionSheet)
-                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
-                alert.addAction(actionOk)
-                self.present(alert, animated: true, completion: nil)
             }
+            // ... creating new user with email and password and can handle errors over here
         }
+        
+//        if UserSingleton.riderMailExist(mail: lowerCasedEmail) {
+//            let alert = UIAlertController(title: "\(txtEmail.text!) already in use", message: "Try a different one", preferredStyle: UIAlertController.Style.actionSheet)
+//            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+//            alert.addAction(actionOk)
+//            self.present(alert, animated: true, completion: nil)
+//        } else{
+//            if UserSingleton.riderContactExist(contact: txtContact.text!){
+//                let alert = UIAlertController(title: "\(txtContact.text!) already in use", message: "Try a different one", preferredStyle: UIAlertController.Style.actionSheet)
+//                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+//                alert.addAction(actionOk)
+//                self.present(alert, animated: true, completion: nil)
+//            } else{
+//                let rider = Riders(password: txtPasswordAgain.text ?? "", firstName: txtFirstName.text!, lastName: txtLastName.text!, dateOfBirth: txtDateOfBirth.text!,email: lowerCasedEmail, contact: txtContact.text!)
+//
+//                UserSingleton.signUpRider(rider: rider)
+//
+//                let alert = UIAlertController(title: "Hi, \(rider.fullName), you are successfully signed up", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+//                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+//                alert.addAction(actionOk)
+//                self.present(alert, animated: true, completion: nil)
+//            }
+//        }
     }
 }
 
