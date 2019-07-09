@@ -6,8 +6,7 @@
   "data" : [
     {
       "idiom" : "universal",
-      "filename" : "README.md",
-      "universal-type-identifier" : "net.daringfireball.markdown"
+      "filename" : "README.md"
     }
   ]
 }
