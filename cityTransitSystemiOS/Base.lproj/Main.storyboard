@@ -247,7 +247,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Xat-bk-hl7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hbP-TI-FoD" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="hbP-TI-FoD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t4k-pI-4Me">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

@@ -40,9 +40,9 @@ class UserHomeViewController: UIViewController {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         
-        let loginVC = sb.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+        let navigationVC = sb.instantiateViewController(withIdentifier: "NavigationVC")
         
-        self.present(loginVC, animated: false, completion: nil)
+        self.present(navigationVC, animated: true, completion: nil)
         }
 }
 
