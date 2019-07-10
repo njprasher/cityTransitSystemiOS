@@ -10,10 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="RnY-71-HQq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="75b-CR-LHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AdminHomeVC" id="Vxf-mr-jib" customClass="AdminHomeViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UQB-Zn-Cfu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -36,9 +35,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="K07-nb-pYu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="9gt-g4-cQ2"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile-29x29.png" id="9gt-g4-cQ2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75b-CR-LHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1357.9710144927537" y="-392.41071428571428"/>
         </scene>
@@ -67,7 +67,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Xt-Xj-jYc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Drivers" id="W4o-Nh-VIA"/>
+                    <tabBarItem key="tabBarItem" title="Drivers" image="drivers-29x29.png" id="W4o-Nh-VIA">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGM-yb-6FC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,7 +100,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6bx-MM-Y8T"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Routes" id="Lpc-NF-8DO"/>
+                    <tabBarItem key="tabBarItem" title="Routes" image="route-29x29.png" id="Lpc-NF-8DO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OoY-0L-Rxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,6 +112,7 @@
                 <tabBarController title="AdminHomeVC" automaticallyAdjustsScrollViewInsets="NO" id="mZi-Xj-2pf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OfD-c6-xE3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -124,4 +127,9 @@
             <point key="canvasLocation" x="86.956521739130437" y="53.571428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="drivers-29x29.png" width="29" height="29"/>
+        <image name="profile-29x29.png" width="29" height="29"/>
+        <image name="route-29x29.png" width="29" height="29"/>
+    </resources>
 </document>

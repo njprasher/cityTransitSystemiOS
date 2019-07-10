@@ -343,6 +343,7 @@
                         <outlet property="imgViewBG" destination="JRj-X6-Fau" id="S5n-76-Ttz"/>
                         <outlet property="txtEmail" destination="dbM-Hd-Poj" id="jIj-0d-Sfw"/>
                         <outlet property="txtPassword" destination="fyg-0h-oTy" id="lFN-9X-o9h"/>
+                        <segue destination="rct-c6-N4L" kind="presentation" identifier="adminHomeS" modalTransitionStyle="coverVertical" id="8uM-gr-qEc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjU-FH-3FJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -37,6 +37,9 @@
 		4C69708322D5ECB500964A29 /* AdminHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69708222D5ECB500964A29 /* AdminHomeViewController.swift */; };
 		4C69708522D6084E00964A29 /* AdminRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69708422D6084E00964A29 /* AdminRoutesViewController.swift */; };
 		4C69708722D6085D00964A29 /* AdminDriversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69708622D6085D00964A29 /* AdminDriversViewController.swift */; };
+		4C69709622D6149D00964A29 /* drivers-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C69709522D6149D00964A29 /* drivers-29x29@3x.png */; };
+		4C69709822D614E200964A29 /* profile-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C69709722D614E200964A29 /* profile-29x29@3x.png */; };
+		4C69709C22D6166300964A29 /* route-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C69709B22D6166200964A29 /* route-29x29@3x.png */; };
 		EC885AB0C7B1A4E41666FB4F /* Pods_cityTransitSystemiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,9 @@
 		4C69708222D5ECB500964A29 /* AdminHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewController.swift; sourceTree = "<group>"; };
 		4C69708422D6084E00964A29 /* AdminRoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRoutesViewController.swift; sourceTree = "<group>"; };
 		4C69708622D6085D00964A29 /* AdminDriversViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDriversViewController.swift; sourceTree = "<group>"; };
+		4C69709522D6149D00964A29 /* drivers-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drivers-29x29@3x.png"; sourceTree = "<group>"; };
+		4C69709722D614E200964A29 /* profile-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-29x29@3x.png"; sourceTree = "<group>"; };
+		4C69709B22D6166200964A29 /* route-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route-29x29@3x.png"; sourceTree = "<group>"; };
 		88447D7D166B8CD8A878B93B /* Pods-cityTransitSystemiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityTransitSystemiOS.release.xcconfig"; path = "Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS.release.xcconfig"; sourceTree = "<group>"; };
 		B82B28E481095632C4DB2186 /* Pods-cityTransitSystemiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityTransitSystemiOS.debug.xcconfig"; path = "Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cityTransitSystemiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +148,7 @@
 		4C35F31822C8751A0078460E /* cityTransitSystemiOS */ = {
 			isa = PBXGroup;
 			children = (
+				4C69709022D613B800964A29 /* icons */,
 				4C26977F22C9B62C00E83643 /* Extensions */,
 				4C35F31922C8751A0078460E /* AppDelegate.swift */,
 				4C26977922C99AF300E83643 /* RoutesViewController.swift */,
@@ -176,6 +183,16 @@
 				4C69707622D5C11A00964A29 /* aurora.gif */,
 			);
 			path = gifs;
+			sourceTree = "<group>";
+		};
+		4C69709022D613B800964A29 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				4C69709522D6149D00964A29 /* drivers-29x29@3x.png */,
+				4C69709722D614E200964A29 /* profile-29x29@3x.png */,
+				4C69709B22D6166200964A29 /* route-29x29@3x.png */,
+			);
+			path = icons;
 			sourceTree = "<group>";
 		};
 		7B66F21A50E9A0EDDB883158 /* Pods */ = {
@@ -251,10 +268,13 @@
 				4C26979422CA066600E83643 /* PostLoginFlow.storyboard in Resources */,
 				4C69707E22D5C11B00964A29 /* snowman.gif in Resources */,
 				4C69707A22D5C11B00964A29 /* strom.gif in Resources */,
+				4C69709622D6149D00964A29 /* drivers-29x29@3x.png in Resources */,
+				4C69709822D614E200964A29 /* profile-29x29@3x.png in Resources */,
 				4C69707B22D5C11B00964A29 /* aurora.gif in Resources */,
 				4C35F32122C8751B0078460E /* Assets.xcassets in Resources */,
 				4C26978522C9BF5200E83643 /* AppIcon.xcassets in Resources */,
 				4C35F31F22C8751A0078460E /* Main.storyboard in Resources */,
+				4C69709C22D6166300964A29 /* route-29x29@3x.png in Resources */,
 				4C27C3AE22CF4E23000753A2 /* GoogleService-Info.plist in Resources */,
 				4C69708122D5EC9D00964A29 /* AdminPostLoginFlow.storyboard in Resources */,
 				4C69707D22D5C11B00964A29 /* car.gif in Resources */,
