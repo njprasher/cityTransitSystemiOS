@@ -232,6 +232,7 @@
                     <navigationItem key="navigationItem" title="SignUp" id="mbO-If-jHh"/>
                     <connections>
                         <outlet property="btnSignUp" destination="GZz-jq-rut" id="FAb-u3-hJF"/>
+                        <outlet property="imgViewBG" destination="cTI-Sh-xgz" id="KUe-3y-LUg"/>
                         <outlet property="txtContact" destination="pu4-WO-2DA" id="Bip-Nu-wEF"/>
                         <outlet property="txtDateOfBirth" destination="y6e-aR-MPX" id="t7q-uA-DvE"/>
                         <outlet property="txtEmail" destination="guO-cv-FsU" id="RWq-pJ-8so"/>

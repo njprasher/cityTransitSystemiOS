@@ -27,6 +27,7 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var btnSignUp: UIButton!
     
+    @IBOutlet weak var imgViewBG: UIImageView!
     
     // to handle firebase exceptions
     
@@ -87,6 +88,10 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //show gif file
+        imgViewBG.loadGif(name: "snowman")
         
         //creating datePicker
         

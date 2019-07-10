@@ -28,6 +28,11 @@
 		4C35F32422C8751B0078460E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F32222C8751B0078460E /* LaunchScreen.storyboard */; };
 		4C69707222D5BF4D00964A29 /* Extension_GifSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69707122D5BF4D00964A29 /* Extension_GifSwift.swift */; };
 		4C69707422D5C00E00964A29 /* stars.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707322D5C00D00964A29 /* stars.gif */; };
+		4C69707A22D5C11B00964A29 /* strom.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707522D5C11A00964A29 /* strom.gif */; };
+		4C69707B22D5C11B00964A29 /* aurora.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707622D5C11A00964A29 /* aurora.gif */; };
+		4C69707C22D5C11B00964A29 /* spacerocks.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707722D5C11A00964A29 /* spacerocks.gif */; };
+		4C69707D22D5C11B00964A29 /* car.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707822D5C11A00964A29 /* car.gif */; };
+		4C69707E22D5C11B00964A29 /* snowman.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707922D5C11B00964A29 /* snowman.gif */; };
 		EC885AB0C7B1A4E41666FB4F /* Pods_cityTransitSystemiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +60,11 @@
 		4C35F32522C8751B0078460E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C69707122D5BF4D00964A29 /* Extension_GifSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_GifSwift.swift; sourceTree = "<group>"; };
 		4C69707322D5C00D00964A29 /* stars.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = stars.gif; sourceTree = "<group>"; };
+		4C69707522D5C11A00964A29 /* strom.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = strom.gif; sourceTree = "<group>"; };
+		4C69707622D5C11A00964A29 /* aurora.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = aurora.gif; sourceTree = "<group>"; };
+		4C69707722D5C11A00964A29 /* spacerocks.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spacerocks.gif; sourceTree = "<group>"; };
+		4C69707822D5C11A00964A29 /* car.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = car.gif; sourceTree = "<group>"; };
+		4C69707922D5C11B00964A29 /* snowman.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = snowman.gif; sourceTree = "<group>"; };
 		88447D7D166B8CD8A878B93B /* Pods-cityTransitSystemiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityTransitSystemiOS.release.xcconfig"; path = "Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS.release.xcconfig"; sourceTree = "<group>"; };
 		B82B28E481095632C4DB2186 /* Pods-cityTransitSystemiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityTransitSystemiOS.debug.xcconfig"; path = "Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cityTransitSystemiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,12 +145,25 @@
 				4C35F32222C8751B0078460E /* LaunchScreen.storyboard */,
 				4C27C3AD22CF4E23000753A2 /* GoogleService-Info.plist */,
 				4C35F32522C8751B0078460E /* Info.plist */,
-				4C69707322D5C00D00964A29 /* stars.gif */,
+				4C69707F22D5C12A00964A29 /* gifs */,
 				4C26978822C9EA7E00E83643 /* Users */,
 				4C26979322CA066600E83643 /* PostLoginFlow.storyboard */,
 				4C26979522CA087F00E83643 /* UserHomeViewController.swift */,
 			);
 			path = cityTransitSystemiOS;
+			sourceTree = "<group>";
+		};
+		4C69707F22D5C12A00964A29 /* gifs */ = {
+			isa = PBXGroup;
+			children = (
+				4C69707822D5C11A00964A29 /* car.gif */,
+				4C69707922D5C11B00964A29 /* snowman.gif */,
+				4C69707722D5C11A00964A29 /* spacerocks.gif */,
+				4C69707522D5C11A00964A29 /* strom.gif */,
+				4C69707322D5C00D00964A29 /* stars.gif */,
+				4C69707622D5C11A00964A29 /* aurora.gif */,
+			);
+			path = gifs;
 			sourceTree = "<group>";
 		};
 		7B66F21A50E9A0EDDB883158 /* Pods */ = {
@@ -214,10 +237,15 @@
 			files = (
 				4C35F32422C8751B0078460E /* LaunchScreen.storyboard in Resources */,
 				4C26979422CA066600E83643 /* PostLoginFlow.storyboard in Resources */,
+				4C69707E22D5C11B00964A29 /* snowman.gif in Resources */,
+				4C69707A22D5C11B00964A29 /* strom.gif in Resources */,
+				4C69707B22D5C11B00964A29 /* aurora.gif in Resources */,
 				4C35F32122C8751B0078460E /* Assets.xcassets in Resources */,
 				4C26978522C9BF5200E83643 /* AppIcon.xcassets in Resources */,
 				4C35F31F22C8751A0078460E /* Main.storyboard in Resources */,
 				4C27C3AE22CF4E23000753A2 /* GoogleService-Info.plist in Resources */,
+				4C69707D22D5C11B00964A29 /* car.gif in Resources */,
+				4C69707C22D5C11B00964A29 /* spacerocks.gif in Resources */,
 				4C69707422D5C00E00964A29 /* stars.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
