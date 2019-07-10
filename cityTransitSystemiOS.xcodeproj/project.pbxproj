@@ -33,6 +33,8 @@
 		4C69707C22D5C11B00964A29 /* spacerocks.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707722D5C11A00964A29 /* spacerocks.gif */; };
 		4C69707D22D5C11B00964A29 /* car.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707822D5C11A00964A29 /* car.gif */; };
 		4C69707E22D5C11B00964A29 /* snowman.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707922D5C11B00964A29 /* snowman.gif */; };
+		4C69708122D5EC9D00964A29 /* AdminPostLoginFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C69708022D5EC9D00964A29 /* AdminPostLoginFlow.storyboard */; };
+		4C69708322D5ECB500964A29 /* AdminHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69708222D5ECB500964A29 /* AdminHomeViewController.swift */; };
 		EC885AB0C7B1A4E41666FB4F /* Pods_cityTransitSystemiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		4C69707722D5C11A00964A29 /* spacerocks.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spacerocks.gif; sourceTree = "<group>"; };
 		4C69707822D5C11A00964A29 /* car.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = car.gif; sourceTree = "<group>"; };
 		4C69707922D5C11B00964A29 /* snowman.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = snowman.gif; sourceTree = "<group>"; };
+		4C69708022D5EC9D00964A29 /* AdminPostLoginFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdminPostLoginFlow.storyboard; sourceTree = "<group>"; };
+		4C69708222D5ECB500964A29 /* AdminHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewController.swift; sourceTree = "<group>"; };
 		88447D7D166B8CD8A878B93B /* Pods-cityTransitSystemiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityTransitSystemiOS.release.xcconfig"; path = "Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS.release.xcconfig"; sourceTree = "<group>"; };
 		B82B28E481095632C4DB2186 /* Pods-cityTransitSystemiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityTransitSystemiOS.debug.xcconfig"; path = "Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cityTransitSystemiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +153,8 @@
 				4C26978822C9EA7E00E83643 /* Users */,
 				4C26979322CA066600E83643 /* PostLoginFlow.storyboard */,
 				4C26979522CA087F00E83643 /* UserHomeViewController.swift */,
+				4C69708022D5EC9D00964A29 /* AdminPostLoginFlow.storyboard */,
+				4C69708222D5ECB500964A29 /* AdminHomeViewController.swift */,
 			);
 			path = cityTransitSystemiOS;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 				4C26978522C9BF5200E83643 /* AppIcon.xcassets in Resources */,
 				4C35F31F22C8751A0078460E /* Main.storyboard in Resources */,
 				4C27C3AE22CF4E23000753A2 /* GoogleService-Info.plist in Resources */,
+				4C69708122D5EC9D00964A29 /* AdminPostLoginFlow.storyboard in Resources */,
 				4C69707D22D5C11B00964A29 /* car.gif in Resources */,
 				4C69707C22D5C11B00964A29 /* spacerocks.gif in Resources */,
 				4C69707422D5C00E00964A29 /* stars.gif in Resources */,
@@ -308,6 +315,7 @@
 				4C26977C22C99C8C00E83643 /* LoginViewController.swift in Sources */,
 				4C26977A22C99AF300E83643 /* RoutesViewController.swift in Sources */,
 				4C26977E22C99C9700E83643 /* SignUpViewController.swift in Sources */,
+				4C69708322D5ECB500964A29 /* AdminHomeViewController.swift in Sources */,
 				4C26979622CA087F00E83643 /* UserHomeViewController.swift in Sources */,
 				4C26978722C9E8F900E83643 /* UserSingleton.swift in Sources */,
 				4C35F31A22C8751A0078460E /* AppDelegate.swift in Sources */,
