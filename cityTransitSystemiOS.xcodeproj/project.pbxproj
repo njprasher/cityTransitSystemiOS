@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0C7FBE22D696ED00E8DC5C /* card-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C0C7FBD22D696EC00E8DC5C /* card-29x29@3x.png */; };
 		4C26977A22C99AF300E83643 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26977922C99AF300E83643 /* RoutesViewController.swift */; };
 		4C26977C22C99C8C00E83643 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26977B22C99C8C00E83643 /* LoginViewController.swift */; };
 		4C26977E22C99C9700E83643 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C26977D22C99C9700E83643 /* SignUpViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C0C7FBD22D696EC00E8DC5C /* card-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "card-29x29@3x.png"; sourceTree = "<group>"; };
 		4C26977922C99AF300E83643 /* RoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
 		4C26977B22C99C8C00E83643 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4C26977D22C99C9700E83643 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				4C69709522D6149D00964A29 /* drivers-29x29@3x.png */,
 				4C69709722D614E200964A29 /* profile-29x29@3x.png */,
 				4C69709B22D6166200964A29 /* route-29x29@3x.png */,
+				4C0C7FBD22D696EC00E8DC5C /* card-29x29@3x.png */,
 			);
 			path = icons;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				4C26978522C9BF5200E83643 /* AppIcon.xcassets in Resources */,
 				4C35F31F22C8751A0078460E /* Main.storyboard in Resources */,
 				4C69709C22D6166300964A29 /* route-29x29@3x.png in Resources */,
+				4C0C7FBE22D696ED00E8DC5C /* card-29x29@3x.png in Resources */,
 				4C27C3AE22CF4E23000753A2 /* GoogleService-Info.plist in Resources */,
 				4C69708122D5EC9D00964A29 /* AdminPostLoginFlow.storyboard in Resources */,
 				4C69707D22D5C11B00964A29 /* car.gif in Resources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bmR-bn-29L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DYv-7c-HOq">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--UserHomeVC-->
+        <!--Profile-->
         <scene sceneID="JaJ-ez-En0">
             <objects>
-                <viewController storyboardIdentifier="UserHomeVC" title="UserHomeVC" id="bmR-bn-29L" customClass="UserHomeViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserHomeVC" id="bmR-bn-29L" customClass="UserHomeViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uAM-rl-lht">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem id="yBj-M6-vPV">
+                                    <navigationItem title="Profile" id="yBj-M6-vPV">
                                         <barButtonItem key="rightBarButtonItem" title="Logout" id="idD-SK-4px">
                                             <connections>
                                                 <action selector="btnLogout:" destination="bmR-bn-29L" id="Ara-wj-GaE"/>
@@ -46,6 +46,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f1B-hs-dsy"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile-29x29.png" id="cv5-6X-i8j"/>
                     <navigationItem key="navigationItem" id="wwu-JV-dQo"/>
                     <connections>
                         <outlet property="lbltest" destination="KTR-as-Hkw" id="2je-ML-ZSI"/>
@@ -53,7 +54,86 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tr0-bw-XVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
+            <point key="canvasLocation" x="1991" y="-424"/>
+        </scene>
+        <!--Routes-->
+        <scene sceneID="EzR-PO-s0l">
+            <objects>
+                <viewController id="Sbv-5t-XWg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="djj-NE-4sA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="74e-IK-PzI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Routes" id="KN7-CC-Qbs"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u8H-6Q-IGz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nEh-Fa-6eE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Routes" image="route-29x29.png" id="ZGj-C9-tPg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="un6-Gd-jGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989.8550724637682" y="284.59821428571428"/>
+        </scene>
+        <!--UserHomeVC-->
+        <scene sceneID="dOC-e1-MBd">
+            <objects>
+                <tabBarController title="UserHomeVC" automaticallyAdjustsScrollViewInsets="NO" id="DYv-7c-HOq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HfB-yC-Hz7">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bmR-bn-29L" kind="relationship" relationship="viewControllers" id="QR7-qK-2Cv"/>
+                        <segue destination="Sbv-5t-XWg" kind="relationship" relationship="viewControllers" id="krd-S2-0Ph"/>
+                        <segue destination="hOb-ed-1XO" kind="relationship" relationship="viewControllers" id="dYG-Zn-HE5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7g4-6y-mhC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="571"/>
+        </scene>
+        <!--Card-->
+        <scene sceneID="lKa-8m-AgX">
+            <objects>
+                <viewController id="hOb-ed-1XO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TaM-xm-Bvo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sgc-dD-1Xx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Card" id="FWf-Ar-F9v"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5nh-OA-gPf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Card" image="card-29x29.png" id="0Zu-ow-ahu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iTQ-vw-6xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="1037"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="card-29x29.png" width="29" height="29"/>
+        <image name="profile-29x29.png" width="29" height="29"/>
+        <image name="route-29x29.png" width="29" height="29"/>
+    </resources>
 </document>
