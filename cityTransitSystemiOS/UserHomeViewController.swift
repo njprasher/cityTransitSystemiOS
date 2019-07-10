@@ -12,6 +12,17 @@ import Firebase
 class UserHomeViewController: UIViewController {
     @IBOutlet weak var lbltest: UILabel!
     
+    @IBOutlet weak var txtFirstName: UITextField!
+    
+    @IBOutlet weak var txtLastName: UITextField!
+    
+    @IBOutlet weak var txtDateOfBirth: UITextField!
+    
+    @IBOutlet weak var txtContact: UITextField!
+    
+    @IBOutlet weak var txtEmail: UITextField!
+    
+    
     // reference to the firebase database
     let ref = Database.database().reference()
     
@@ -34,13 +45,24 @@ class UserHomeViewController: UIViewController {
         
         // retrieving data from firebase
         
+        //getting current active user
         let userID = Auth.auth().currentUser?.uid
         ref.child("riders").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
             let firstName = value?["firstName"] as? String ?? ""
+            let lastName = value?["lastName"] as? String ?? ""
+            let dateOfBirth = value?["dateOfBirth"] as? String ?? ""
+            let contact = value?["contact"] as? String ?? ""
+            let email = value?["email"] as? String ?? ""
             
-            self.lbltest.text = "Hi \(firstName) Good \(timeOfDay)"
+            self.lbltest.text = "Hi \(firstName), Good \(timeOfDay)"
+            self.txtFirstName.text = firstName
+            self.txtLastName.text = lastName
+            self.txtDateOfBirth.text = dateOfBirth
+            self.txtContact.text = contact
+            self.txtEmail.text = email
+            
             // ...
         }) { (error) in
             print(error.localizedDescription)
