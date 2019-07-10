@@ -1,5 +1,5 @@
 //
-//  AdminHomeViewController.swift
+//  AdminRoutesViewController.swift
 //  cityTransitSystemiOS
 //
 //  Created by Neeraj Prasher on 2019-07-10.
@@ -9,11 +9,8 @@
 import UIKit
 import Firebase
 
-class AdminHomeViewController: UIViewController {
+class AdminRoutesViewController: UIViewController {
 
-    // reference to the firebase database
-    //let ref = Database.database().reference()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

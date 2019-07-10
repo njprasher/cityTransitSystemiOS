@@ -357,6 +357,14 @@
             </objects>
             <point key="canvasLocation" x="3717" y="489"/>
         </scene>
+        <!--AdminPostLoginFlow-->
+        <scene sceneID="En0-zN-zYC">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="AdminPostLoginFlow" storyboardName="AdminPostLoginFlow" id="rct-c6-N4L" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mrw-Pr-3Zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3744" y="388"/>
+        </scene>
     </scenes>
     <resources>
         <image name="iTunesArtwork" width="200" height="200"/>

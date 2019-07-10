@@ -31,12 +31,21 @@ class LoginViewController: UIViewController {
             //guard let strongSelf = self else { return }
             // ...
             if error == nil{
-                let sb = UIStoryboard(name: "PostLoginFlow", bundle: nil)
-                
-                let userHomeVC = sb.instantiateViewController(withIdentifier: "UserHomeVC") as! UserHomeViewController
-                
-                self?.present(userHomeVC, animated: true, completion: nil)
-                
+                if (self?.txtEmail.text == "admin@routes.com") // check if admin email
+                {
+                    let sb = UIStoryboard(name: "AdminPostLoginFlow", bundle: nil)
+                    
+                    let adminHomeVC = sb.instantiateViewController(withIdentifier: "AdminHomeVC") as! AdminHomeViewController
+                    
+                    self?.present(adminHomeVC, animated: true, completion: nil)
+                    
+                } else{
+                    let sb = UIStoryboard(name: "PostLoginFlow", bundle: nil)
+                    
+                    let userHomeVC = sb.instantiateViewController(withIdentifier: "UserHomeVC") as! UserHomeViewController
+                    
+                    self?.present(userHomeVC, animated: true, completion: nil)
+                }
                 } else {
                 let alert = UIAlertController(title: "Invalid Credentials", message: "", preferredStyle: UIAlertController.Style.actionSheet)
                 let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)

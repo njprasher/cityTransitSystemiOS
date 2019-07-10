@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vxf-mr-jib">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mZi-Xj-2pf">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,19 +10,118 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="RnY-71-HQq">
             <objects>
-                <viewController storyboardIdentifier="AdminHomeVC" id="Vxf-mr-jib" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75b-CR-LHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="AdminHomeVC" id="Vxf-mr-jib" customClass="AdminHomeViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UQB-Zn-Cfu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTg-z7-qrm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="qdJ-Sl-Zhz">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="8eR-bF-0bq">
+                                            <connections>
+                                                <action selector="btnLogOut:" destination="Vxf-mr-jib" id="ubv-gz-Fdh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="K07-nb-pYu"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9gt-g4-cQ2"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="75b-CR-LHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1357.9710144927537" y="-392.41071428571428"/>
+        </scene>
+        <!--Drivers-->
+        <scene sceneID="S6M-ea-JqU">
+            <objects>
+                <viewController id="Sx1-TS-Gcp" customClass="AdminDriversViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kgh-Jc-QzJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m96-O1-GGV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="JBl-CI-Xmn">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="dZg-No-eL2">
+                                            <connections>
+                                                <action selector="btnLogOut:" destination="Sx1-TS-Gcp" id="uoU-6j-xO5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Xt-Xj-jYc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Drivers" id="W4o-Nh-VIA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGM-yb-6FC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1357.9710144927537" y="531.69642857142856"/>
+        </scene>
+        <!--Routes-->
+        <scene sceneID="be8-lu-BXE">
+            <objects>
+                <viewController id="ILa-vn-omr" customClass="AdminRoutesViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XIO-20-4YI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4W-I9-wvL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="nuT-Gk-jJe">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="sdj-DM-JMT">
+                                            <connections>
+                                                <action selector="btnLogOut:" destination="ILa-vn-omr" id="jlY-o6-k9T"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6bx-MM-Y8T"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Routes" id="Lpc-NF-8DO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OoY-0L-Rxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2386.9565217391305" y="53.571428571428569"/>
+        </scene>
+        <!--AdminHomeVC-->
+        <scene sceneID="wul-55-2K7">
+            <objects>
+                <tabBarController title="AdminHomeVC" automaticallyAdjustsScrollViewInsets="NO" id="mZi-Xj-2pf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OfD-c6-xE3">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Vxf-mr-jib" kind="relationship" relationship="viewControllers" id="32T-Am-bcV"/>
+                        <segue destination="ILa-vn-omr" kind="relationship" relationship="viewControllers" id="8at-OU-0ci"/>
+                        <segue destination="Sx1-TS-Gcp" kind="relationship" relationship="viewControllers" id="Mo2-NP-hdD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6c-9H-PNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="53.571428571428569"/>
         </scene>
     </scenes>
 </document>
