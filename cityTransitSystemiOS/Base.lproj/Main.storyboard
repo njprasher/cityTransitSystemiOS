@@ -344,6 +344,7 @@
                         <outlet property="txtEmail" destination="dbM-Hd-Poj" id="jIj-0d-Sfw"/>
                         <outlet property="txtPassword" destination="fyg-0h-oTy" id="lFN-9X-o9h"/>
                         <segue destination="rct-c6-N4L" kind="presentation" identifier="adminHomeS" modalTransitionStyle="coverVertical" id="8uM-gr-qEc"/>
+                        <segue destination="7EW-lB-eny" kind="presentation" identifier="riderHomeS" id="q3e-Zk-6Q6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjU-FH-3FJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

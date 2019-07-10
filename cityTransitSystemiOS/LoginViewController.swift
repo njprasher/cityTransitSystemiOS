@@ -33,15 +33,13 @@ class LoginViewController: UIViewController {
             if error == nil{
                 if (self?.txtEmail.text == "admin@routes.com") // check if admin email
                 {
-                    //perform segue pushes another vc and thus the user can go back to the previous screen
+                    //perform segue on condition
                     self?.performSegue(withIdentifier: "adminHomeS", sender: nil)
                     
                 } else{
-                    let sb = UIStoryboard(name: "PostLoginFlow", bundle: nil)
+                    //perform segue on condition
+                    self?.performSegue(withIdentifier: "riderHomeS", sender: nil)
                     
-                    let userHomeVC = sb.instantiateViewController(withIdentifier: "UserHomeVC") as! UserHomeViewController
-                    
-                    self?.present(userHomeVC, animated: true, completion: nil)
                 }
                 } else {
                 let alert = UIAlertController(title: "Invalid Credentials", message: "", preferredStyle: UIAlertController.Style.actionSheet)
