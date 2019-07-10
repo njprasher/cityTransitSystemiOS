@@ -383,19 +383,12 @@ class SignUpViewController: UIViewController {
             //after creating user add all data to the firebase database
             let user = Auth.auth().currentUser
             if let user = user {
-                // The user's ID, unique to the Firebase project.
-                // Do NOT use this value to authenticate with your backend server,
-                // if you have one. Use getTokenWithCompletion:completion: instead.
-//                let uid = user.uid
-//                let email = user.email
-//                let photoURL = user.photoURL
                 self.ref.child("riders").child(user.uid)
                 self.ref.child("riders").child(user.uid).child("firstName").setValue(self.txtFirstName.text)
                 self.ref.child("riders").child(user.uid).child("lastName").setValue(self.txtLastName.text)
                 self.ref.child("riders").child(user.uid).child("dateOfBirth").setValue(self.txtDateOfBirth.text)
                 self.ref.child("riders").child(user.uid).child("contact").setValue(self.txtContact.text)
                 self.ref.child("riders").child(user.uid).child("email").setValue(user.email)
-                // ...
             }
         }
     }

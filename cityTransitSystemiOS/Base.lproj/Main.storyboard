@@ -203,7 +203,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZz-jq-rut">
-                                <rect key="frame" x="40" y="708" width="334" height="30"/>
+                                <rect key="frame" x="10" y="708" width="394" height="30"/>
                                 <color key="backgroundColor" red="0.48891246318817139" green="0.73144501447677612" blue="0.86921441555023193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="SignUp">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -217,13 +217,13 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="cTI-Sh-xgz" secondAttribute="bottom" id="3xH-d9-ez8"/>
                             <constraint firstItem="kAd-3z-FI2" firstAttribute="centerX" secondItem="oKT-xg-gEG" secondAttribute="centerX" id="ASB-Fb-GOb"/>
-                            <constraint firstItem="GZz-jq-rut" firstAttribute="leading" secondItem="A71-sA-Ewq" secondAttribute="leading" constant="40" id="LOL-SV-WJN"/>
                             <constraint firstItem="cTI-Sh-xgz" firstAttribute="top" secondItem="oKT-xg-gEG" secondAttribute="top" id="W51-2Q-Gsh"/>
                             <constraint firstItem="GZz-jq-rut" firstAttribute="centerX" secondItem="oKT-xg-gEG" secondAttribute="centerX" id="bvX-Tc-Q2N"/>
                             <constraint firstItem="GZz-jq-rut" firstAttribute="top" secondItem="kAd-3z-FI2" secondAttribute="bottom" constant="40" id="dFk-JK-daz"/>
                             <constraint firstItem="A71-sA-Ewq" firstAttribute="trailing" secondItem="kAd-3z-FI2" secondAttribute="trailing" constant="10" id="lQ8-MT-CQP"/>
                             <constraint firstAttribute="trailing" secondItem="cTI-Sh-xgz" secondAttribute="trailing" id="qhG-OD-l3T"/>
                             <constraint firstItem="kAd-3z-FI2" firstAttribute="leading" secondItem="A71-sA-Ewq" secondAttribute="leading" constant="10" id="rWs-Wj-fUv"/>
+                            <constraint firstItem="A71-sA-Ewq" firstAttribute="trailing" secondItem="GZz-jq-rut" secondAttribute="trailing" constant="10" id="rfS-uE-9O8"/>
                             <constraint firstItem="cTI-Sh-xgz" firstAttribute="leading" secondItem="oKT-xg-gEG" secondAttribute="leading" id="wfQ-s9-SnA"/>
                             <constraint firstItem="kAd-3z-FI2" firstAttribute="top" secondItem="A71-sA-Ewq" secondAttribute="top" constant="30" id="yt8-Dz-Np3"/>
                         </constraints>

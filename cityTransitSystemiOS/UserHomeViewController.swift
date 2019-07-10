@@ -32,20 +32,19 @@ class UserHomeViewController: UIViewController {
                 }
             }
         
-//        let userID = Auth.auth().currentUser?.uid
-//        ref.child("riders").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
-//            // Get user value
-//            let value = snapshot.value as? NSDictionary
-//            let username = value?["username"] as? String ?? ""
-//            let user = User(username: username)
-//
-//            // ...
-//        }) { (error) in
-//            print(error.localizedDescription)
-//        }
-//
-       // self.lbltest.text = "Hi \(ref.child("riders").value(forKey: "firsName")) Good \(timeOfDay)"
+        // retrieving data from firebase
         
+        let userID = Auth.auth().currentUser?.uid
+        ref.child("riders").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let firstName = value?["firstName"] as? String ?? ""
+            
+            self.lbltest.text = "Hi \(firstName) Good \(timeOfDay)"
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
         // Do any additional setup after loading the view.
     }
     
