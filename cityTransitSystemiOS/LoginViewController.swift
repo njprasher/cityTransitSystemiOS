@@ -20,8 +20,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         //show gif file
-    
-        
+        imgViewBG.loadGif(name: "stars")
         // Do any additional setup after loading the view.
     }
     

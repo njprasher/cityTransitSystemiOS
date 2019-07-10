@@ -9,6 +9,8 @@
 import UIKit
 import ImageIO
 
+//https://github.com/yogeshpatelios/Swift-4-Xcode-9---How-To-Display-GIF-in-UIImage-with-One-Line-Of-Code-in-iOS-Latest-2017-Hindi./blob/master/UIImage%2BGif.swift
+
 extension UIImageView {
     
     public func loadGif(name: String) {
