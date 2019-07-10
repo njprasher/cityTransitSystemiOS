@@ -12,7 +12,9 @@ import Firebase
 class UserHomeViewController: UIViewController {
     @IBOutlet weak var lbltest: UILabel!
     
-
+    // reference to the firebase database
+    let ref = Database.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var timeOfDay: String{
@@ -30,7 +32,19 @@ class UserHomeViewController: UIViewController {
                 }
             }
         
-        self.lbltest.text = "Hi \(UserSingleton.activeRider.fullName) Good \(timeOfDay)"
+//        let userID = Auth.auth().currentUser?.uid
+//        ref.child("riders").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+//            // Get user value
+//            let value = snapshot.value as? NSDictionary
+//            let username = value?["username"] as? String ?? ""
+//            let user = User(username: username)
+//
+//            // ...
+//        }) { (error) in
+//            print(error.localizedDescription)
+//        }
+//
+       // self.lbltest.text = "Hi \(ref.child("riders").value(forKey: "firsName")) Good \(timeOfDay)"
         
         // Do any additional setup after loading the view.
     }

@@ -36,6 +36,16 @@ class SignUpViewController: UIViewController {
     
     var handle: AuthStateDidChangeListenerHandle?
     
+    // var to store check validation
+    
+    var firstNameValid = false
+    var lastNameValid = false
+    var dateOfBirthValid = false
+    var contactValid = false
+    var emailValid = false
+    var passwordValid = false
+    var passwordAgainValid = false
+    
     //convert String to Date
     func stringToDate(string: String) -> Date{
         let dateformatter = DateFormatter()
@@ -166,6 +176,8 @@ class SignUpViewController: UIViewController {
                 let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
                 alert.addAction(actionOk)
                 self.present(alert, animated: true, completion: nil)
+            } else {
+                firstNameValid = true
             }
         }
     }
@@ -184,6 +196,8 @@ class SignUpViewController: UIViewController {
                 let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
                 alert.addAction(actionOk)
                 self.present(alert, animated: true, completion: nil)
+            } else {
+                lastNameValid = true
             }
         }
     }
@@ -202,6 +216,8 @@ class SignUpViewController: UIViewController {
                 let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
                 alert.addAction(actionOk)
                 self.present(alert, animated: true, completion: nil)
+            } else {
+                dateOfBirthValid = true
             }
         }
     }
@@ -220,6 +236,8 @@ class SignUpViewController: UIViewController {
                 let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
                 alert.addAction(actionOk)
                 self.present(alert, animated: true, completion: nil)
+            } else {
+                contactValid = true
             }
         }
     }
@@ -238,6 +256,8 @@ class SignUpViewController: UIViewController {
                 let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
                 alert.addAction(actionOk)
                 self.present(alert, animated: true, completion: nil)
+            } else {
+                emailValid = true
             }
         }
     }
@@ -256,6 +276,8 @@ class SignUpViewController: UIViewController {
                 let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
                 alert.addAction(actionOk)
                 self.present(alert, animated: true, completion: nil)
+            } else {
+                passwordValid = true
             }
         }
     }
@@ -274,6 +296,8 @@ class SignUpViewController: UIViewController {
                 let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
                 alert.addAction(actionOk)
                 self.present(alert, animated: true, completion: nil)
+            } else {
+                passwordAgainValid = true
             }
         }
     }
@@ -325,29 +349,29 @@ class SignUpViewController: UIViewController {
         
         //checking everything is right before signing in
         
-        checkAll()
+        self.checkAll()
         
+        if (firstNameValid && lastNameValid && dateOfBirthValid && contactValid && emailValid && passwordValid && passwordAgainValid){
+            
+            print(firstNameValid)
+            print(lastNameValid)
+            print(dateOfBirthValid)
+            print(contactValid)
+            print(emailValid)
+            print(passwordValid)
+            print(passwordAgainValid)
         //changed email to lower case to make email consistent
         
         let lowerCasedEmail = txtEmail.text!.lowercased()
         
         Auth.auth().createUser(withEmail: lowerCasedEmail, password: self.txtPasswordAgain.text!) { authResult, error in
             if error == nil{
-                let alert = UIAlertController(title: "Hi, \(lowerCasedEmail) you are successfully signed up", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                let alert = UIAlertController(title: "Hi, \(String(describing: self.txtFirstName.text!)) you are successfully signed up", message: "", preferredStyle: UIAlertController.Style.actionSheet)
                 let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
                 alert.addAction(actionOk)
                 let actionLogin = UIAlertAction(title: "Login", style: UIAlertAction.Style.default, handler: { (actionLogin) in
-                    
-//                    let sb = UIStoryboard(name: "Main", bundle: nil)
-//
-//                    let loginVC = sb.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
-//
-//                    self.present(loginVC, animated: false, completion: nil)
-                    
                     //perform segue pushes another vc and thus the user can go back to the previous screen
-                    
                     self.performSegue(withIdentifier: "LoginViaAction", sender: nil)
-                    
                 })
                 alert.addAction(actionLogin)
                 self.present(alert, animated: true, completion: nil)
@@ -356,7 +380,6 @@ class SignUpViewController: UIViewController {
                 self.handleError(error!)   // use the handleError method
             }
            
-            
             //after creating user add all data to the firebase database
             let user = Auth.auth().currentUser
             if let user = user {
@@ -366,23 +389,16 @@ class SignUpViewController: UIViewController {
 //                let uid = user.uid
 //                let email = user.email
 //                let photoURL = user.photoURL
-                self.ref.child("riders").child("id").setValue(user.uid)
-                self.ref.child("riders").child("firstName").setValue(self.txtFirstName.text)
-                self.ref.child("riders").child("lastName").setValue(self.txtLastName.text)
-                self.ref.child("riders").child("dateOfBirth").setValue(self.txtDateOfBirth.text)
-                self.ref.child("riders").child("contact").setValue(self.txtContact.text)
-                self.ref.child("riders").child("email").setValue(user.email)
-
-                
+                self.ref.child("riders").child(user.uid)
+                self.ref.child("riders").child(user.uid).child("firstName").setValue(self.txtFirstName.text)
+                self.ref.child("riders").child(user.uid).child("lastName").setValue(self.txtLastName.text)
+                self.ref.child("riders").child(user.uid).child("dateOfBirth").setValue(self.txtDateOfBirth.text)
+                self.ref.child("riders").child(user.uid).child("contact").setValue(self.txtContact.text)
+                self.ref.child("riders").child(user.uid).child("email").setValue(user.email)
                 // ...
             }
-            
-            
         }
-        
-        
-
-        
+    }
 //        if UserSingleton.riderMailExist(mail: lowerCasedEmail) {
 //            let alert = UIAlertController(title: "\(txtEmail.text!) already in use", message: "Try a different one", preferredStyle: UIAlertController.Style.actionSheet)
 //            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
