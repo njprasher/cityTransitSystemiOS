@@ -29,6 +29,9 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var imgViewBG: UIImageView!
     
+    // reference to the firebase database
+    let ref = Database.database().reference()
+    
     // to handle firebase exceptions
     
     var handle: AuthStateDidChangeListenerHandle?
@@ -88,8 +91,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         //show gif file
         imgViewBG.loadGif(name: "snowman")
         
@@ -321,6 +323,10 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpCheck(_ sender: UIButton) {
         
+        //checking everything is right before signing in
+        
+        checkAll()
+        
         //changed email to lower case to make email consistent
         
         let lowerCasedEmail = txtEmail.text!.lowercased()
@@ -349,8 +355,32 @@ class SignUpViewController: UIViewController {
             {
                 self.handleError(error!)   // use the handleError method
             }
-            // ... creating new user with email and password and can handle errors over here
+           
+            
+            //after creating user add all data to the firebase database
+            let user = Auth.auth().currentUser
+            if let user = user {
+                // The user's ID, unique to the Firebase project.
+                // Do NOT use this value to authenticate with your backend server,
+                // if you have one. Use getTokenWithCompletion:completion: instead.
+//                let uid = user.uid
+//                let email = user.email
+//                let photoURL = user.photoURL
+                self.ref.child("riders").child("id").setValue(user.uid)
+                self.ref.child("riders").child("firstName").setValue(self.txtFirstName.text)
+                self.ref.child("riders").child("lastName").setValue(self.txtLastName.text)
+                self.ref.child("riders").child("dateOfBirth").setValue(self.txtDateOfBirth.text)
+                self.ref.child("riders").child("contact").setValue(self.txtContact.text)
+                self.ref.child("riders").child("email").setValue(user.email)
+
+                
+                // ...
+            }
+            
+            
         }
+        
+        
 
         
 //        if UserSingleton.riderMailExist(mail: lowerCasedEmail) {
@@ -378,6 +408,7 @@ class SignUpViewController: UIViewController {
     }
 }
 
+ // ... creating new user with email and password and can handle errors over here
 
 extension AuthErrorCode {
     var errorMessage: String {
