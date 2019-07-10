@@ -86,7 +86,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light" translatesAutoresizingMaskIntoConstraints="NO" id="cTI-Sh-xgz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightBlueBG" translatesAutoresizingMaskIntoConstraints="NO" id="cTI-Sh-xgz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kAd-3z-FI2">
@@ -135,7 +135,7 @@
                                         </accessibility>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="given-name"/>
+                                        <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="endDateOfBirth:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="WA2-Wi-zt7"/>
                                         </connections>
@@ -203,9 +203,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZz-jq-rut">
-                                <rect key="frame" x="40" y="698" width="334" height="30"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="SignUp"/>
+                                <rect key="frame" x="40" y="708" width="334" height="30"/>
+                                <color key="backgroundColor" red="0.48891246318817139" green="0.73144501447677612" blue="0.86921441555023193" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="SignUp">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="signUpCheck:" destination="cgk-CH-A3j" eventType="touchUpInside" id="rkU-Bg-H6S"/>
                                 </connections>
@@ -218,8 +220,8 @@
                             <constraint firstItem="GZz-jq-rut" firstAttribute="leading" secondItem="A71-sA-Ewq" secondAttribute="leading" constant="40" id="LOL-SV-WJN"/>
                             <constraint firstItem="cTI-Sh-xgz" firstAttribute="top" secondItem="oKT-xg-gEG" secondAttribute="top" id="W51-2Q-Gsh"/>
                             <constraint firstItem="GZz-jq-rut" firstAttribute="centerX" secondItem="oKT-xg-gEG" secondAttribute="centerX" id="bvX-Tc-Q2N"/>
+                            <constraint firstItem="GZz-jq-rut" firstAttribute="top" secondItem="kAd-3z-FI2" secondAttribute="bottom" constant="40" id="dFk-JK-daz"/>
                             <constraint firstItem="A71-sA-Ewq" firstAttribute="trailing" secondItem="kAd-3z-FI2" secondAttribute="trailing" constant="10" id="lQ8-MT-CQP"/>
-                            <constraint firstItem="GZz-jq-rut" firstAttribute="top" secondItem="kAd-3z-FI2" secondAttribute="bottom" constant="30" id="ngo-l6-Vv8"/>
                             <constraint firstAttribute="trailing" secondItem="cTI-Sh-xgz" secondAttribute="trailing" id="qhG-OD-l3T"/>
                             <constraint firstItem="kAd-3z-FI2" firstAttribute="leading" secondItem="A71-sA-Ewq" secondAttribute="leading" constant="10" id="rWs-Wj-fUv"/>
                             <constraint firstItem="cTI-Sh-xgz" firstAttribute="leading" secondItem="oKT-xg-gEG" secondAttribute="leading" id="wfQ-s9-SnA"/>
@@ -270,7 +272,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="light" translatesAutoresizingMaskIntoConstraints="NO" id="JRj-X6-Fau">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JRj-X6-Fau">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vRo-VO-UrW">
@@ -337,6 +339,7 @@
                         <barButtonItem key="backBarButtonItem" title="Log Out" id="ljU-Hg-DcB"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="imgViewBG" destination="JRj-X6-Fau" id="S5n-76-Ttz"/>
                         <outlet property="txtEmail" destination="dbM-Hd-Poj" id="jIj-0d-Sfw"/>
                         <outlet property="txtPassword" destination="fyg-0h-oTy" id="lFN-9X-o9h"/>
                     </connections>
@@ -355,8 +358,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iTunesArtwork" width="512" height="512"/>
+        <image name="iTunesArtwork" width="200" height="200"/>
         <image name="light" width="4200" height="4200"/>
+        <image name="lightBlueBG" width="650" height="1155"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fht-cg-4j8"/>

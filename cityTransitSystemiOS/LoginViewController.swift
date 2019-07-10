@@ -14,9 +14,14 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var txtPassword: UITextField!
     
+    @IBOutlet weak var imgViewBG: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //show gif file
+    
+        
         // Do any additional setup after loading the view.
     }
     

@@ -26,6 +26,7 @@
 		4C35F31F22C8751A0078460E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F31D22C8751A0078460E /* Main.storyboard */; };
 		4C35F32122C8751B0078460E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F32022C8751B0078460E /* Assets.xcassets */; };
 		4C35F32422C8751B0078460E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F32222C8751B0078460E /* LaunchScreen.storyboard */; };
+		4C69707222D5BF4D00964A29 /* Extension_GifSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69707122D5BF4D00964A29 /* Extension_GifSwift.swift */; };
 		EC885AB0C7B1A4E41666FB4F /* Pods_cityTransitSystemiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		4C35F32022C8751B0078460E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C35F32322C8751B0078460E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C35F32522C8751B0078460E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C69707122D5BF4D00964A29 /* Extension_GifSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_GifSwift.swift; sourceTree = "<group>"; };
 		88447D7D166B8CD8A878B93B /* Pods-cityTransitSystemiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityTransitSystemiOS.release.xcconfig"; path = "Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS.release.xcconfig"; sourceTree = "<group>"; };
 		B82B28E481095632C4DB2186 /* Pods-cityTransitSystemiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityTransitSystemiOS.debug.xcconfig"; path = "Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cityTransitSystemiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				4C26978022C9B64A00E83643 /* Extension_String.swift */,
+				4C69707122D5BF4D00964A29 /* Extension_GifSwift.swift */,
 				4C26978222C9B69500E83643 /* Extension_Float.swift */,
 			);
 			path = Extensions;
@@ -268,6 +271,7 @@
 				4C26979222C9F30300E83643 /* Routes.swift in Sources */,
 				4C26978C22C9EAF800E83643 /* Admin.swift in Sources */,
 				4C26978E22C9EB2B00E83643 /* Riders.swift in Sources */,
+				4C69707222D5BF4D00964A29 /* Extension_GifSwift.swift in Sources */,
 				4C26978322C9B69500E83643 /* Extension_Float.swift in Sources */,
 				4C26977C22C99C8C00E83643 /* LoginViewController.swift in Sources */,
 				4C26977A22C99AF300E83643 /* RoutesViewController.swift in Sources */,
