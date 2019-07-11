@@ -16,12 +16,34 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var imgViewBG: UIImageView!
     
+    @IBOutlet weak var switchRememberMe: UISwitch!
+    
+    //geting userdefault reference
+    let userDefault = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.getRememberMeValues()
         
         //show gif file
         imgViewBG.loadGif(name: "stars")
         // Do any additional setup after loading the view.
+    }
+    
+    private func getRememberMeValues()
+    {
+        let userDefault = UserDefaults.standard
+        
+        if let email = userDefault.string(forKey: "userEmail")
+        {
+            txtEmail.text = email
+            
+            if let pwd = userDefault.string(forKey: "userPassword")
+            {
+                txtPassword.text = pwd
+            }
+        }
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
@@ -31,6 +53,22 @@ class LoginViewController: UIViewController {
             //guard let strongSelf = self else { return }
             // ...
             if error == nil{
+                
+                //implementing user defaults to remember details
+                
+                let userDefault = UserDefaults.standard
+                if self!.switchRememberMe.isOn
+                {
+                    
+                    userDefault.setValue(self!.txtEmail.text, forKey: "userEmail")
+                    userDefault.set(self!.txtPassword.text, forKey: "userPassword")
+                }
+                else
+                {
+                    userDefault.removeObject(forKey: "userEmail")
+                    userDefault.removeObject(forKey: "userPassword")
+                }
+                
                 if (self?.txtEmail.text == "admin@routes.com") // check if admin email
                 {
                     //perform segue on condition
