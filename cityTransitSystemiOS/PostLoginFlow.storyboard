@@ -140,7 +140,7 @@
         <!--Routes-->
         <scene sceneID="EzR-PO-s0l">
             <objects>
-                <viewController id="Sbv-5t-XWg" sceneMemberID="viewController">
+                <viewController id="Sbv-5t-XWg" customClass="UserRoutesViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="djj-NE-4sA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,6 +173,7 @@
                 <tabBarController title="UserHomeVC" automaticallyAdjustsScrollViewInsets="NO" id="DYv-7c-HOq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HfB-yC-Hz7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -189,7 +190,7 @@
         <!--Card-->
         <scene sceneID="lKa-8m-AgX">
             <objects>
-                <viewController id="hOb-ed-1XO" sceneMemberID="viewController">
+                <viewController id="hOb-ed-1XO" customClass="UserCardsViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TaM-xm-Bvo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

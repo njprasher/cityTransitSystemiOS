@@ -40,6 +40,8 @@
 		4C69709622D6149D00964A29 /* drivers-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C69709522D6149D00964A29 /* drivers-29x29@3x.png */; };
 		4C69709822D614E200964A29 /* profile-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C69709722D614E200964A29 /* profile-29x29@3x.png */; };
 		4C69709C22D6166300964A29 /* route-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C69709B22D6166200964A29 /* route-29x29@3x.png */; };
+		4CD4C70622DF8B4B00BF7F97 /* UserRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4C70522DF8B4B00BF7F97 /* UserRoutesViewController.swift */; };
+		4CD4C70822DF8B5A00BF7F97 /* UserCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4C70722DF8B5A00BF7F97 /* UserCardsViewController.swift */; };
 		EC885AB0C7B1A4E41666FB4F /* Pods_cityTransitSystemiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		4C69709522D6149D00964A29 /* drivers-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drivers-29x29@3x.png"; sourceTree = "<group>"; };
 		4C69709722D614E200964A29 /* profile-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-29x29@3x.png"; sourceTree = "<group>"; };
 		4C69709B22D6166200964A29 /* route-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route-29x29@3x.png"; sourceTree = "<group>"; };
+		4CD4C70522DF8B4B00BF7F97 /* UserRoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoutesViewController.swift; sourceTree = "<group>"; };
+		4CD4C70722DF8B5A00BF7F97 /* UserCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardsViewController.swift; sourceTree = "<group>"; };
 		88447D7D166B8CD8A878B93B /* Pods-cityTransitSystemiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityTransitSystemiOS.release.xcconfig"; path = "Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS.release.xcconfig"; sourceTree = "<group>"; };
 		B82B28E481095632C4DB2186 /* Pods-cityTransitSystemiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cityTransitSystemiOS.debug.xcconfig"; path = "Target Support Files/Pods-cityTransitSystemiOS/Pods-cityTransitSystemiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cityTransitSystemiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +168,8 @@
 				4C26978822C9EA7E00E83643 /* Users */,
 				4C26979322CA066600E83643 /* PostLoginFlow.storyboard */,
 				4C26979522CA087F00E83643 /* UserHomeViewController.swift */,
+				4CD4C70522DF8B4B00BF7F97 /* UserRoutesViewController.swift */,
+				4CD4C70722DF8B5A00BF7F97 /* UserCardsViewController.swift */,
 				4C69708022D5EC9D00964A29 /* AdminPostLoginFlow.storyboard */,
 				4C69708422D6084E00964A29 /* AdminRoutesViewController.swift */,
 				4C69708622D6085D00964A29 /* AdminDriversViewController.swift */,
@@ -333,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C26978A22C9EAA300E83643 /* Users.swift in Sources */,
+				4CD4C70822DF8B5A00BF7F97 /* UserCardsViewController.swift in Sources */,
 				4C26979222C9F30300E83643 /* Routes.swift in Sources */,
 				4C26978C22C9EAF800E83643 /* Admin.swift in Sources */,
 				4C26978E22C9EB2B00E83643 /* Riders.swift in Sources */,
@@ -347,6 +354,7 @@
 				4C26978722C9E8F900E83643 /* UserSingleton.swift in Sources */,
 				4C35F31A22C8751A0078460E /* AppDelegate.swift in Sources */,
 				4C26978122C9B64A00E83643 /* Extension_String.swift in Sources */,
+				4CD4C70622DF8B4B00BF7F97 /* UserRoutesViewController.swift in Sources */,
 				4C69708722D6085D00964A29 /* AdminDriversViewController.swift in Sources */,
 				4C26979022C9EB3500E83643 /* Drivers.swift in Sources */,
 			);
