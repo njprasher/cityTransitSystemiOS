@@ -384,13 +384,34 @@ class SignUpViewController: UIViewController {
                 //showing alerts
                 
                 let alert = UIAlertController(title: "Hi, \(String(describing: self.txtFirstName.text!)) you are successfully signed up", message: "Do you want to login now?", preferredStyle: UIAlertController.Style.actionSheet)
-                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (actionOK) in
+                let actionOk = UIAlertAction(title: "Yeah!", style: UIAlertAction.Style.default, handler: { (actionOK) in
                     //get that button pressed and passing values from here
-                    
+                    Auth.auth().signIn(withEmail: lowerCasedEmail, password: self.txtPassword.text!) { [weak self] user, error in
+                        //guard let strongSelf = self else { return }
+                        // ...
+                        if error == nil{
+                            if (self?.txtEmail.text == "admin@routes.com") // check if admin email
+                            {
+                                //perform segue on condition
+                                self?.performSegue(withIdentifier: "adminLHomeS", sender: nil)
+                                
+                            } else{
+                                //perform segue on condition
+                                self?.performSegue(withIdentifier: "riderLHomeS", sender: nil)
+                                
+                            }
+                        } else {
+                            let alert = UIAlertController(title: "Invalid Credentials", message: "", preferredStyle: UIAlertController.Style.actionSheet)
+                            let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                            alert.addAction(actionOk)
+                            self!.present(alert, animated: true, completion: nil)
+                        }
+                        
+                    }
                     
                 })
                 alert.addAction(actionOk)
-                let actionCancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { (actionCancel) in
+                let actionCancel = UIAlertAction(title: "Not now", style: UIAlertAction.Style.default, handler: { (actionCancel) in
                     //perform segue pushes another vc and thus the user can go back to the previous screen
                     self.performSegue(withIdentifier: "LoginViaAction", sender: nil)
                     self.userDefault.setValue(self.txtEmail.text, forKey: "userEmail")

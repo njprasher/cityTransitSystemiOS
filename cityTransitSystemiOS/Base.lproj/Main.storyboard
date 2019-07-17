@@ -241,6 +241,8 @@
                         <outlet property="txtPassword" destination="yVt-Mp-CXy" id="6pm-qo-W5q"/>
                         <outlet property="txtPasswordAgain" destination="eMc-xm-3wq" id="7D1-Zf-nVl"/>
                         <segue destination="HuS-rE-0Dc" kind="show" identifier="LoginViaAction" id="fht-cg-4j8"/>
+                        <segue destination="rct-c6-N4L" kind="presentation" identifier="adminLHomeS" id="6X2-3x-l6J"/>
+                        <segue destination="7EW-lB-eny" kind="presentation" identifier="riderLHomeS" id="wYd-fj-KQp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYE-Nw-IpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -389,6 +391,8 @@
         <image name="lightBlueBG" width="650" height="1155"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="6X2-3x-l6J"/>
+        <segue reference="wYd-fj-KQp"/>
         <segue reference="fht-cg-4j8"/>
     </inferredMetricsTieBreakers>
 </document>
