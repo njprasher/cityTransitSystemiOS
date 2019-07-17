@@ -106,9 +106,6 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="given-name"/>
-                                                <connections>
-                                                    <action selector="endFirstName:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="evq-pX-q0u"/>
-                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ss4-aJ-L2d">
                                                 <rect key="frame" x="0.0" y="80" width="394" height="30"/>
@@ -121,9 +118,6 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="family-name"/>
-                                                <connections>
-                                                    <action selector="endLastName:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="ZiS-nP-Bwc"/>
-                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XB7-5S-BLP">
                                                 <rect key="frame" x="0.0" y="160" width="394" height="30"/>
@@ -140,7 +134,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                 <connections>
-                                                    <action selector="endDateOfBirth:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="WA2-Wi-zt7"/>
+                                                    <action selector="dobEndEdit:" destination="cgk-CH-A3j" eventType="touchDown" id="aeO-fE-pu7"/>
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bK-Yi-jVf">
@@ -154,9 +148,6 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
-                                                <connections>
-                                                    <action selector="endContact:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="ov3-qk-RnD"/>
-                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQt-eA-B6K">
                                                 <rect key="frame" x="0.0" y="320" width="394" height="30"/>
@@ -169,9 +160,6 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
-                                                <connections>
-                                                    <action selector="endEmail:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="4AI-Dw-Hb0"/>
-                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFG-AA-idD">
                                                 <rect key="frame" x="0.0" y="400" width="394" height="30"/>
@@ -184,9 +172,6 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="new-password"/>
-                                                <connections>
-                                                    <action selector="endPassword:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="NMI-ul-5sO"/>
-                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfU-8n-NMz">
                                                 <rect key="frame" x="0.0" y="480" width="394" height="30"/>
@@ -199,9 +184,6 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
-                                                <connections>
-                                                    <action selector="endPasswordAgain:" destination="cgk-CH-A3j" eventType="editingDidEnd" id="Rex-Vn-G4x"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -403,8 +385,8 @@
         <image name="lightBlueBG" width="650" height="1155"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8uM-gr-qEc"/>
-        <segue reference="q3e-Zk-6Q6"/>
+        <segue reference="6X2-3x-l6J"/>
+        <segue reference="wYd-fj-KQp"/>
         <segue reference="fht-cg-4j8"/>
     </inferredMetricsTieBreakers>
 </document>

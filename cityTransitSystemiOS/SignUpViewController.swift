@@ -308,6 +308,7 @@ class SignUpViewController: UIViewController {
     //check all
     
     func checkAll(){
+        self.view.endEditing(true)
         self.checkFirstName()
         self.checkLastName()
         self.checkDateOfBirth()
@@ -317,36 +318,43 @@ class SignUpViewController: UIViewController {
         self.checkPasswordAgain()
     }
     
+    //close keyboard when tapped
+    
+    @IBAction func dobEndEdit(_ sender: UITextField) {
+        self.view.endEditing(true)
+    }
+    
+    
     //implementing checks
-    
-    @IBAction func endFirstName(_ sender: Any) {
-        self.checkFirstName()
-    }
-    
-    @IBAction func endLastName(_ sender: UITextField) {
-      self.checkLastName()
-    }
-    
-    @IBAction func endDateOfBirth(_ sender: UITextField) {
-       self.checkDateOfBirth()
-    }
-    
-    @IBAction func endContact(_ sender: UITextField) {
-       self.checkContact()
-    }
-    
-    @IBAction func endEmail(_ sender: UITextField) {
-       self.checkEmail()
-    }
-    
-    @IBAction func endPassword(_ sender: UITextField) {
-        self.checkPassword()
-    }
-    
-    @IBAction func endPasswordAgain(_ sender: UITextField) {
-        self.checkPasswordAgain()
-    }
-    
+//
+//    @IBAction func endFirstName(_ sender: Any) {
+//        self.checkFirstName()
+//    }
+//
+//    @IBAction func endLastName(_ sender: UITextField) {
+//      self.checkLastName()
+//    }
+//
+//    @IBAction func endDateOfBirth(_ sender: UITextField) {
+//       self.checkDateOfBirth()
+//    }
+//
+//    @IBAction func endContact(_ sender: UITextField) {
+//       self.checkContact()
+//    }
+//
+//    @IBAction func endEmail(_ sender: UITextField) {
+//       self.checkEmail()
+//    }
+//
+//    @IBAction func endPassword(_ sender: UITextField) {
+//        self.checkPassword()
+//    }
+//
+//    @IBAction func endPasswordAgain(_ sender: UITextField) {
+//        self.checkPasswordAgain()
+//    }
+//
     
     @IBAction func signUpCheck(_ sender: UIButton) {
         
