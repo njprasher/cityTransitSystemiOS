@@ -12,12 +12,15 @@ class EditProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //make the navigation bar
-//        let rightButton = UIBarButtonItem(title: "Save", style: UIBarButtonItem.Style.plain, target: self, action: #selector(   self.saveBill))
-//        self.navigationItem.rightBarButtonItem = rightButton
+        
+        let rightButton = UIBarButtonItem(title: "Save", style: UIBarButtonItem.Style.plain, target: self, action: #selector(   self.saveProfile))
+        self.navigationItem.rightBarButtonItem = rightButton
         // Do any additional setup after loading the view.
     }
     
+    @objc func saveProfile(){
+        
+    }
 
     /*
     // MARK: - Navigation
