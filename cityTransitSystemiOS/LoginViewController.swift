@@ -42,6 +42,7 @@ class LoginViewController: UIViewController {
             if let pwd = userDefault.string(forKey: "userPassword")
             {
                 txtPassword.text = pwd
+                switchRememberMe.setOn(true, animated: false)
             }
         }
     }
