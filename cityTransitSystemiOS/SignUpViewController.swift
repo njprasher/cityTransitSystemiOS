@@ -36,6 +36,9 @@ class SignUpViewController: UIViewController {
     
     var handle: AuthStateDidChangeListenerHandle?
     
+    // getting user defaults reference
+    let userDefault = UserDefaults.standard
+    
     // var to store check validation
     
     var firstNameValid = false
@@ -372,6 +375,9 @@ class SignUpViewController: UIViewController {
                 let actionLogin = UIAlertAction(title: "Login", style: UIAlertAction.Style.default, handler: { (actionLogin) in
                     //perform segue pushes another vc and thus the user can go back to the previous screen
                     self.performSegue(withIdentifier: "LoginViaAction", sender: nil)
+                    self.userDefault.setValue(self.txtEmail.text, forKey: "userEmail")
+                    self.userDefault.set(self.txtPassword.text, forKey: "userPassword")
+                    
                 })
                 alert.addAction(actionLogin)
                 self.present(alert, animated: true, completion: nil)
