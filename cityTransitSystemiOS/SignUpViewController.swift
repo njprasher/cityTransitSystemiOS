@@ -369,33 +369,42 @@ class SignUpViewController: UIViewController {
         
         Auth.auth().createUser(withEmail: lowerCasedEmail, password: self.txtPasswordAgain.text!) { authResult, error in
             if error == nil{
-                let alert = UIAlertController(title: "Hi, \(String(describing: self.txtFirstName.text!)) you are successfully signed up", message: "", preferredStyle: UIAlertController.Style.actionSheet)
-                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                
+                //after creating user add all data to the firebase database
+                let user = Auth.auth().currentUser
+                if let user = user {
+                    self.ref.child("riders").child(user.uid)
+                    self.ref.child("riders").child(user.uid).child("firstName").setValue(self.txtFirstName.text)
+                    self.ref.child("riders").child(user.uid).child("lastName").setValue(self.txtLastName.text)
+                    self.ref.child("riders").child(user.uid).child("dateOfBirth").setValue(self.txtDateOfBirth.text)
+                    self.ref.child("riders").child(user.uid).child("contact").setValue(self.txtContact.text)
+                    self.ref.child("riders").child(user.uid).child("email").setValue(user.email)
+                }
+                
+                //showing alerts
+                
+                let alert = UIAlertController(title: "Hi, \(String(describing: self.txtFirstName.text!)) you are successfully signed up", message: "Do you want to login now?", preferredStyle: UIAlertController.Style.actionSheet)
+                let actionOk = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (actionOK) in
+                    //get that button pressed and passing values from here
+                    
+                    
+                })
                 alert.addAction(actionOk)
-                let actionLogin = UIAlertAction(title: "Login", style: UIAlertAction.Style.default, handler: { (actionLogin) in
+                let actionCancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { (actionCancel) in
                     //perform segue pushes another vc and thus the user can go back to the previous screen
                     self.performSegue(withIdentifier: "LoginViaAction", sender: nil)
                     self.userDefault.setValue(self.txtEmail.text, forKey: "userEmail")
                     self.userDefault.set(self.txtPassword.text, forKey: "userPassword")
                     
                 })
-                alert.addAction(actionLogin)
+                alert.addAction(actionCancel)
                 self.present(alert, animated: true, completion: nil)
             } else
             {
                 self.handleError(error!)   // use the handleError method
             }
            
-            //after creating user add all data to the firebase database
-            let user = Auth.auth().currentUser
-            if let user = user {
-                self.ref.child("riders").child(user.uid)
-                self.ref.child("riders").child(user.uid).child("firstName").setValue(self.txtFirstName.text)
-                self.ref.child("riders").child(user.uid).child("lastName").setValue(self.txtLastName.text)
-                self.ref.child("riders").child(user.uid).child("dateOfBirth").setValue(self.txtDateOfBirth.text)
-                self.ref.child("riders").child(user.uid).child("contact").setValue(self.txtContact.text)
-                self.ref.child("riders").child(user.uid).child("email").setValue(user.email)
-            }
+
         }
     }
 //        if UserSingleton.riderMailExist(mail: lowerCasedEmail) {
