@@ -109,6 +109,9 @@
                                 <state key="normal" title="Edit Profile">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="TZV-Lv-u2k" kind="show" id="raF-Qf-U11"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -136,6 +139,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tr0-bw-XVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1989.8550724637682" y="-424.55357142857139"/>
+        </scene>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="Ihi-80-DFs">
+            <objects>
+                <viewController id="TZV-Lv-u2k" customClass="EditProfileViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K2r-ci-X0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="L7K-wb-XCP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ec6-ET-hbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3061" y="-425"/>
         </scene>
         <!--Routes-->
         <scene sceneID="EzR-PO-s0l">
