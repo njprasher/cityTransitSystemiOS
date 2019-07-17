@@ -303,7 +303,7 @@
                                         <rect key="frame" x="0.0" y="40" width="394" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLn-pb-iAS">
                                         <rect key="frame" x="0.0" y="80" width="394" height="30"/>
@@ -315,7 +315,7 @@
                                         <rect key="frame" x="0.0" y="120" width="394" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -403,8 +403,8 @@
         <image name="lightBlueBG" width="650" height="1155"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6X2-3x-l6J"/>
-        <segue reference="wYd-fj-KQp"/>
+        <segue reference="8uM-gr-qEc"/>
+        <segue reference="q3e-Zk-6Q6"/>
         <segue reference="fht-cg-4j8"/>
     </inferredMetricsTieBreakers>
 </document>
