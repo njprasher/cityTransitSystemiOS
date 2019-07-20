@@ -92,6 +92,92 @@ class UserHomeViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
        
         }
+    
+    //made profile editable
+    
+    @IBAction func btnEditFirstName(_ sender: UIButton) {
+        if !self.txtFirstName.isUserInteractionEnabled{
+            sender.setTitle("Save", for: .normal)
+            self.txtFirstName.isUserInteractionEnabled = true
+            
+        } else{
+            sender.setTitle("✎ Edit", for: .normal)
+            let user = Auth.auth().currentUser
+            if let user = user {
+                self.ref.child("riders").child(user.uid)
+                self.ref.child("riders").child(user.uid).child("firstName").setValue(self.txtFirstName.text)
+            }
+            self.txtFirstName.isUserInteractionEnabled = false
+        }
+    }
+    
+    @IBAction func btnEditLastName(_ sender: UIButton) {
+        if !self.txtLastName.isUserInteractionEnabled{
+            sender.setTitle("Save", for: .normal)
+            self.txtLastName.isUserInteractionEnabled = true
+            
+        } else{
+            sender.setTitle("✎ Edit", for: .normal)
+            let user = Auth.auth().currentUser
+            if let user = user {
+                self.ref.child("riders").child(user.uid)
+                self.ref.child("riders").child(user.uid).child("lastName").setValue(self.txtLastName.text)
+            }
+            self.txtLastName.isUserInteractionEnabled = false
+        }
+    }
+    @IBAction func btnEditDateOfBirth(_ sender: UIButton) {
+        if !self.txtDateOfBirth.isUserInteractionEnabled{
+            sender.setTitle("Save", for: .normal)
+            self.txtDateOfBirth.isUserInteractionEnabled = true
+            
+        } else{
+            sender.setTitle("✎ Edit", for: .normal)
+            let user = Auth.auth().currentUser
+            if let user = user {
+                self.ref.child("riders").child(user.uid)
+                 self.ref.child("riders").child(user.uid).child("dateOfBirth").setValue(self.txtDateOfBirth.text)
+
+            }
+            self.txtDateOfBirth.isUserInteractionEnabled = false
+        }
+    }
+    @IBAction func btnEditContact(_ sender: UIButton) {
+        if !self.txtContact.isUserInteractionEnabled{
+            sender.setTitle("Save", for: .normal)
+            self.txtContact.isUserInteractionEnabled = true
+            
+        } else{
+            sender.setTitle("✎ Edit", for: .normal)
+            let user = Auth.auth().currentUser
+            if let user = user {
+                self.ref.child("riders").child(user.uid)
+                 self.ref.child("riders").child(user.uid).child("contact").setValue(self.txtContact.text)
+
+            }
+            self.txtContact.isUserInteractionEnabled = false
+        }
+    }
+    @IBAction func btnEditEmail(_ sender: UIButton) {
+        if !self.txtEmail.isUserInteractionEnabled{
+            sender.setTitle("Save", for: .normal)
+            self.txtEmail.isUserInteractionEnabled = true
+            
+        } else{
+            sender.setTitle("✎ Edit", for: .normal)
+            Auth.auth().currentUser?.updateEmail(to: self.txtEmail.text!) { (error) in
+                // ...
+                let user = Auth.auth().currentUser
+                if let user = user {
+                    self.ref.child("riders").child(user.uid)
+                    self.ref.child("riders").child(user.uid).child("email").setValue(user.email)
+                }
+            }
+            
+            self.txtEmail.isUserInteractionEnabled = false
+        }
+    }
+    
 }
 
     /*
