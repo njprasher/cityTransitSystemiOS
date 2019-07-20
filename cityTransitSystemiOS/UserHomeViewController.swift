@@ -15,9 +15,9 @@ class UserHomeViewController: UIViewController {
     @IBOutlet weak var txtFirstName: UITextField!
     
     @IBOutlet weak var txtLastName: UITextField!
-    
-    @IBOutlet weak var txtDateOfBirth: UITextField!
-    
+//
+//    @IBOutlet weak var txtDateOfBirth: UITextField!
+//
     @IBOutlet weak var txtContact: UITextField!
     
     @IBOutlet weak var txtEmail: UITextField!
@@ -52,14 +52,14 @@ class UserHomeViewController: UIViewController {
             let value = snapshot.value as? NSDictionary
             let firstName = value?["firstName"] as? String ?? ""
             let lastName = value?["lastName"] as? String ?? ""
-            let dateOfBirth = value?["dateOfBirth"] as? String ?? ""
+            //let dateOfBirth = value?["dateOfBirth"] as? String ?? ""
             let contact = value?["contact"] as? String ?? ""
             let email = value?["email"] as? String ?? ""
             
             self.lbltest.text = "Hi \(firstName), Good \(timeOfDay)"
             self.txtFirstName.text = firstName
             self.txtLastName.text = lastName
-            self.txtDateOfBirth.text = dateOfBirth
+            //self.txtDateOfBirth.text = dateOfBirth
             self.txtContact.text = contact
             self.txtEmail.text = email
             
@@ -126,22 +126,22 @@ class UserHomeViewController: UIViewController {
             self.txtLastName.isUserInteractionEnabled = false
         }
     }
-    @IBAction func btnEditDateOfBirth(_ sender: UIButton) {
-        if !self.txtDateOfBirth.isUserInteractionEnabled{
-            sender.setTitle("Save", for: .normal)
-            self.txtDateOfBirth.isUserInteractionEnabled = true
-            
-        } else{
-            sender.setTitle("✎ Edit", for: .normal)
-            let user = Auth.auth().currentUser
-            if let user = user {
-                self.ref.child("riders").child(user.uid)
-                 self.ref.child("riders").child(user.uid).child("dateOfBirth").setValue(self.txtDateOfBirth.text)
-
-            }
-            self.txtDateOfBirth.isUserInteractionEnabled = false
-        }
-    }
+//    @IBAction func btnEditDateOfBirth(_ sender: UIButton) {
+//        if !self.txtDateOfBirth.isUserInteractionEnabled{
+//            sender.setTitle("Save", for: .normal)
+//            self.txtDateOfBirth.isUserInteractionEnabled = true
+//
+//        } else{
+//            sender.setTitle("✎ Edit", for: .normal)
+//            let user = Auth.auth().currentUser
+//            if let user = user {
+//                self.ref.child("riders").child(user.uid)
+//                 self.ref.child("riders").child(user.uid).child("dateOfBirth").setValue(self.txtDateOfBirth.text)
+//
+//            }
+//            self.txtDateOfBirth.isUserInteractionEnabled = false
+//        }
+//    }
     @IBAction func btnEditContact(_ sender: UIButton) {
         if !self.txtContact.isUserInteractionEnabled{
             sender.setTitle("Save", for: .normal)
