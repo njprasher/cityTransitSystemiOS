@@ -8,9 +8,13 @@
 
 import Foundation
 
-enum RouteColor{
-    case Red, Green, Blue, Orange, Yellow
-    case white
+enum RouteColor : String{
+    case Red = "Red"
+    case Green = "Green"
+    case Blue = "Blue"
+    case Orange = "Orange"
+    case Yellow = "Yellow"
+    case white = "white"
 }
 
 class Routes
@@ -22,6 +26,7 @@ class Routes
     var routeFrequency: Int
     var routePrice: Float
     var routeColor: RouteColor
+    static var routesArray = Array<Routes>()
     
     init()
     {
