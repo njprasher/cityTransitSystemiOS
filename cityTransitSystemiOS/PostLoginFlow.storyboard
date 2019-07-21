@@ -207,6 +207,9 @@
                                         <rect key="frame" x="148" y="53" width="98" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Contact Us"/>
+                                        <connections>
+                                            <action selector="btnContactUs:" destination="6Ox-yw-il0" eventType="touchUpInside" id="UW7-r0-ULW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Leq-3e-CeC">
                                         <rect key="frame" x="156" y="106" width="82" height="36"/>
