@@ -27,6 +27,8 @@
 		4C35F31F22C8751A0078460E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F31D22C8751A0078460E /* Main.storyboard */; };
 		4C35F32122C8751B0078460E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F32022C8751B0078460E /* Assets.xcassets */; };
 		4C35F32422C8751B0078460E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F32222C8751B0078460E /* LaunchScreen.storyboard */; };
+		4C65237D22E40487008729CD /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65237C22E40487008729CD /* AboutUsViewController.swift */; };
+		4C65238122E40576008729CD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65238022E40576008729CD /* HelpViewController.swift */; };
 		4C69707222D5BF4D00964A29 /* Extension_GifSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69707122D5BF4D00964A29 /* Extension_GifSwift.swift */; };
 		4C69707422D5C00E00964A29 /* stars.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707322D5C00D00964A29 /* stars.gif */; };
 		4C69707A22D5C11B00964A29 /* strom.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707522D5C11A00964A29 /* strom.gif */; };
@@ -69,6 +71,8 @@
 		4C35F32022C8751B0078460E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C35F32322C8751B0078460E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C35F32522C8751B0078460E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C65237C22E40487008729CD /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		4C65238022E40576008729CD /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4C69707122D5BF4D00964A29 /* Extension_GifSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_GifSwift.swift; sourceTree = "<group>"; };
 		4C69707322D5C00D00964A29 /* stars.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = stars.gif; sourceTree = "<group>"; };
 		4C69707522D5C11A00964A29 /* strom.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = strom.gif; sourceTree = "<group>"; };
@@ -170,7 +174,9 @@
 				4C26978822C9EA7E00E83643 /* Users */,
 				4C26979322CA066600E83643 /* PostLoginFlow.storyboard */,
 				4C26979522CA087F00E83643 /* UserHomeViewController.swift */,
+				4C65238022E40576008729CD /* HelpViewController.swift */,
 				4CD4C70922DF8F3500BF7F97 /* EditProfileViewController.swift */,
+				4C65237C22E40487008729CD /* AboutUsViewController.swift */,
 				4CD4C70522DF8B4B00BF7F97 /* UserRoutesViewController.swift */,
 				4CD4C70722DF8B5A00BF7F97 /* UserCardsViewController.swift */,
 				4C69708022D5EC9D00964A29 /* AdminPostLoginFlow.storyboard */,
@@ -345,6 +351,7 @@
 				4CD4C70822DF8B5A00BF7F97 /* UserCardsViewController.swift in Sources */,
 				4C26979222C9F30300E83643 /* Routes.swift in Sources */,
 				4C26978C22C9EAF800E83643 /* Admin.swift in Sources */,
+				4C65237D22E40487008729CD /* AboutUsViewController.swift in Sources */,
 				4C26978E22C9EB2B00E83643 /* Riders.swift in Sources */,
 				4C69708522D6084E00964A29 /* AdminRoutesViewController.swift in Sources */,
 				4C69707222D5BF4D00964A29 /* Extension_GifSwift.swift in Sources */,
@@ -361,6 +368,7 @@
 				4CD4C70622DF8B4B00BF7F97 /* UserRoutesViewController.swift in Sources */,
 				4C69708722D6085D00964A29 /* AdminDriversViewController.swift in Sources */,
 				4C26979022C9EB3500E83643 /* Drivers.swift in Sources */,
+				4C65238122E40576008729CD /* HelpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
