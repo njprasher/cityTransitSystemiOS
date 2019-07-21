@@ -29,6 +29,7 @@
 		4C35F32422C8751B0078460E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F32222C8751B0078460E /* LaunchScreen.storyboard */; };
 		4C65237D22E40487008729CD /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65237C22E40487008729CD /* AboutUsViewController.swift */; };
 		4C65238122E40576008729CD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65238022E40576008729CD /* HelpViewController.swift */; };
+		4C65238322E40907008729CD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C65238222E40907008729CD /* WebKit.framework */; };
 		4C69707222D5BF4D00964A29 /* Extension_GifSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69707122D5BF4D00964A29 /* Extension_GifSwift.swift */; };
 		4C69707422D5C00E00964A29 /* stars.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707322D5C00D00964A29 /* stars.gif */; };
 		4C69707A22D5C11B00964A29 /* strom.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707522D5C11A00964A29 /* strom.gif */; };
@@ -73,6 +74,7 @@
 		4C35F32522C8751B0078460E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C65237C22E40487008729CD /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		4C65238022E40576008729CD /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		4C65238222E40907008729CD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4C69707122D5BF4D00964A29 /* Extension_GifSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_GifSwift.swift; sourceTree = "<group>"; };
 		4C69707322D5C00D00964A29 /* stars.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = stars.gif; sourceTree = "<group>"; };
 		4C69707522D5C11A00964A29 /* strom.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = strom.gif; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C65238322E40907008729CD /* WebKit.framework in Frameworks */,
 				EC885AB0C7B1A4E41666FB4F /* Pods_cityTransitSystemiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +112,7 @@
 		316483B6469CC4077488987B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C65238222E40907008729CD /* WebKit.framework */,
 				EE35C8BC0DE389D4A3710C9D /* Pods_cityTransitSystemiOS.framework */,
 			);
 			name = Frameworks;

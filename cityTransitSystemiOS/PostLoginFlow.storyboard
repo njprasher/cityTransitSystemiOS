@@ -309,13 +309,46 @@
                     <view key="view" contentMode="scaleToFill" id="AM7-t6-D9P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLh-O4-fUv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="681"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X3g-hl-JVs">
+                                <rect key="frame" x="0.0" y="769" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="tkn-PV-4zi"/>
+                                    <barButtonItem title="Home" id="83d-Yx-vwr">
+                                        <connections>
+                                            <action selector="webBrowserAction:" destination="x4v-9d-Oxt" id="GoF-he-bPT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8mn-mg-q7i"/>
+                                    <barButtonItem tag="1" title="Next" id="oPa-cB-Uwz"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Uyh-ji-wvB"/>
+                                    <barButtonItem tag="2" title="Prev" id="oRY-oT-mXv"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XZI-IG-imR"/>
+                                    <barButtonItem tag="3" systemItem="refresh" id="h0j-2h-zvC"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="05u-wm-KDh"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MDC-Je-ZZa"/>
                     </view>
+                    <connections>
+                        <outlet property="wkAboutUs" destination="PLh-O4-fUv" id="m3Z-iz-pkm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clD-sT-lW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4619" y="-305"/>
+            <point key="canvasLocation" x="4618.840579710145" y="-305.35714285714283"/>
         </scene>
         <!--User Routes View Controller-->
         <scene sceneID="EzR-PO-s0l">
