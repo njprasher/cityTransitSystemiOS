@@ -7,7 +7,6 @@ target 'cityTransitSystemiOS' do
 
   # Pods for cityTransitSystemiOS
 
-  pod 'RealmSwift'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
