@@ -10,28 +10,47 @@ import UIKit
 import Firebase
 
 class RoutesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    // reference to the firebase database
-    var db: DatabaseReference!
+    
+    //https://firebase.google.com/docs/database/ios/read-and-write
+    
+    var ref:DatabaseReference!
+    var tblIdArray = Array<String>()
+    var routesDict = [String: Routes]()
     
     @IBOutlet weak var tblRoutes: UITableView!
     
-    var routeName = "McLaughlin"
     override func viewDidLoad() {
         super.viewDidLoad()
-        
- 
-        
-        let r1 = Routes(routeName: "mAVIS", routeId: "66", routeStart: "Brampton South", routeEnd: "Mississauga City Center", routePrice: 3.10, routeFrequency: 25, routeColor: RouteColor.Orange)
-        let r2 = Routes(routeName: "MVIS", routeId: "66", routeStart: "Brampton South", routeEnd: "Mississauga City Center", routePrice: 3.10, routeFrequency: 25, routeColor: RouteColor.Orange)
-        let r3 = Routes(routeName: "MVS", routeId: "66", routeStart: "Brampton South", routeEnd: "Mississauga City Center", routePrice: 3.10, routeFrequency: 25, routeColor: RouteColor.Orange)
-        let r4 = Routes(routeName: "McLaughlin", routeId: "78", routeStart: "idk", routeEnd: "idk", routePrice: 3.75, routeFrequency: 45, routeColor: RouteColor.Green)
-        
-        
-        Routes.routesArray = [r1, r2, r3, r4]
-        
-        //to make tables active
+        //getting database reference
+        self.ref = Database.database().reference()
+        //to make tables active -almost forgot this-
         self.tblRoutes.delegate = self
         self.tblRoutes.dataSource = self
+        
+        print("view load")
+        
+        self.ref.child("routes").observeSingleEvent(of: .value, with: {(snapshot) in
+            for thisRoute in snapshot.children.allObjects as! [DataSnapshot] {
+                print(thisRoute.key)
+                //put values in array over here
+                self.tblIdArray.append(thisRoute.key)
+                //getting all values for particular id from firebase
+                let value = thisRoute.value as? NSDictionary
+                let routeName = value?["routeName"]  as? String ?? "not found"
+                let routeColor = value?["routeColor"]  as? String ?? "not found"
+                let routeId = value?["routeId"]  as? String ?? "not found"
+                let routeStart = value?["routeStart"]  as? String ?? "not found"
+                let routeEnd = value?["routeEnd"]  as? String ?? "not found"
+                let routeFrequency = value?["routeFrequency"]  as? String ?? "not found"
+                let routePrice = value?["routePrice"]  as? String ?? "not found"
+                let r1 = Routes(routeName: routeName, routeId: routeId, routeStart: routeStart, routeEnd: routeEnd, routePrice: Float(routePrice) ?? Float(0.0), routeFrequency: Int(routeFrequency) ?? Int(0), routeColor: RouteColor(rawValue: routeColor) ?? RouteColor.white)
+                self.routesDict[thisRoute.key] =  r1
+            }
+            
+            //this code runs at the end of everything
+            print(self.tblIdArray , "<---- id array outside")
+            self.tblRoutes.reloadData()
+        })
         // Do any additional setup after loading the view.
     }
     
@@ -39,16 +58,18 @@ class RoutesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var btnSignUp: UIButton!
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Routes.routesArray.count
+        print("table cell number load")
+        //getting number of current routes from the local array which is populated by firebase
+        return self.tblIdArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "routeCell")  as! UITableViewCell
-        
-        cell.textLabel?.text = Routes.routesArray[indexPath.row].routeName
+        let cell = tableView.dequeueReusableCell(withIdentifier: "routesCell")  as! UITableViewCell
+        cell.textLabel?.text = "\(self.tblIdArray[indexPath.row]) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeName)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routePrice)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeId)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeColor)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeFrequency)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeStart)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeEnd))"
         cell.tag = indexPath.row
+        cell.textLabel?.numberOfLines = 12
+        print(" table cells load")
         return cell
     }
     
