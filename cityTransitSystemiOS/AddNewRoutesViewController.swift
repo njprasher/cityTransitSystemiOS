@@ -14,7 +14,7 @@ class AddNewRoutesViewController: UIViewController {
     @IBOutlet weak var txtRouteName: UITextField!
     @IBOutlet weak var txtRouteFrequency: UITextField!
     @IBOutlet weak var segmentColor: UISegmentedControl!
-    @IBOutlet weak var txtRoutePrice: UITextField!
+    @IBOutlet weak var segmentPrice: UISegmentedControl!
     @IBOutlet weak var txtRouteStart: UITextField!
     @IBOutlet weak var txtRouteEnd: UITextField!
     var ref: DatabaseReference!
@@ -33,9 +33,9 @@ class AddNewRoutesViewController: UIViewController {
             //checking if user exist for security
             if let user = user {
                 self.ref.child("routes").child(user.uid)
-                self.ref.child("routes").child(self.txtRouteId.text!).child("routeId").setValue(self.txtRouteId.text)
+                self.ref.child("routes").child(self.txtRouteId.text!).child("routeId").setValue(Int(self.txtRouteId.text ?? "0"))
                 self.ref.child("routes").child(self.txtRouteId.text!).child("routeName").setValue(self.txtRouteName.text)
-                self.ref.child("routes").child(self.txtRouteId.text!).child("routeFrequency").setValue(self.txtRouteFrequency.text)
+                self.ref.child("routes").child(self.txtRouteId.text!).child("routeFrequency").setValue(Int(self.txtRouteFrequency.text ?? "0"))
                 var color = String()
                 switch self.segmentColor.selectedSegmentIndex {
                 case 0:
@@ -52,11 +52,29 @@ class AddNewRoutesViewController: UIViewController {
                     color = "white"
                 }
                 self.ref.child("routes").child(self.txtRouteId.text!).child("routeColor").setValue(color)
-                self.ref.child("routes").child(self.txtRouteId.text!).child("routePrice").setValue(self.txtRoutePrice.text)
+               
+                var price = Float()
+                switch self.segmentPrice.selectedSegmentIndex {
+                case 0:
+                    price = 2.5
+                case 1:
+                    price = 2.75
+                case 2:
+                    price = 3.1
+                case 3:
+                    price = 4.4
+                case 4:
+                    price = 8.4
+                default:
+                    price = 0.0
+                }
+                self.ref.child("routes").child(self.txtRouteId.text!).child("routePrice").setValue(price)
                 self.ref.child("routes").child(self.txtRouteId.text!).child("routeStart").setValue(self.txtRouteStart.text)
                 self.ref.child("routes").child(self.txtRouteId.text!).child("routeEnd").setValue(self.txtRouteEnd.text)
                 
             }
+            
+            self.performSegue(withIdentifier: "comeToAdminRoutes", sender: self)
         })
         
         alert.addAction(actionOK)
@@ -71,6 +89,7 @@ class AddNewRoutesViewController: UIViewController {
     
     
     @IBAction func btnCancel(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "comeToAdminRoutes", sender: self)
     }
     
     

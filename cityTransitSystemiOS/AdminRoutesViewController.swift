@@ -32,7 +32,8 @@ class AdminRoutesViewController: UIViewController, UITableViewDelegate, UITableV
         
         self.navigationItem.title = "Routes"
         
-        self.ref.child("routes").observeSingleEvent(of: .value, with: {(snapshot) in
+        self.ref.child("routes").observe(.value, with: {(snapshot) in
+            self.tblIdArray = []
             for thisRoute in snapshot.children.allObjects as! [DataSnapshot] {
                 print(thisRoute.key)
                 //put values in array over here
@@ -121,8 +122,10 @@ class AdminRoutesViewController: UIViewController, UITableViewDelegate, UITableV
         print(" table cells load")
         return cell
     }
+   //unwind segue reference //https://www.andrewcbancroft.com/2015/12/18/working-with-unwind-segues-programmatically-in-swift/
     
-    
+    @IBAction func comeToAdminRoutes(segue: UIStoryboardSegue){
+    }
     /*
      // MARK: - Navigation
      
