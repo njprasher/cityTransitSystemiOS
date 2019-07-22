@@ -41,9 +41,9 @@ class RoutesViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let routeId = value?["routeId"]  as? String ?? "not found"
                 let routeStart = value?["routeStart"]  as? String ?? "not found"
                 let routeEnd = value?["routeEnd"]  as? String ?? "not found"
-                let routeFrequency = value?["routeFrequency"]  as? String ?? "not found"
-                let routePrice = value?["routePrice"]  as? String ?? "not found"
-                let r1 = Routes(routeName: routeName, routeId: routeId, routeStart: routeStart, routeEnd: routeEnd, routePrice: Float(routePrice) ?? Float(0.0), routeFrequency: Int(routeFrequency) ?? Int(0), routeColor: RouteColor(rawValue: routeColor) ?? RouteColor.white)
+                let routeFrequency = value?["routeFrequency"]  as? Int ?? Int(404)
+                let routePrice = value?["routePrice"]  as? NSNumber ?? NSNumber(40.4)
+                let r1 = Routes(routeName: routeName, routeId: routeId, routeStart: routeStart, routeEnd: routeEnd, routePrice: Float(truncating: routePrice), routeFrequency: routeFrequency, routeColor: RouteColor(rawValue: routeColor) ?? RouteColor.white)
                 self.routesDict[thisRoute.key] =  r1
             }
             
@@ -66,9 +66,9 @@ class RoutesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "routesCell")  as! UITableViewCell
-        cell.textLabel?.text = "\(self.tblIdArray[indexPath.row]) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeName)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routePrice)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeId)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeColor)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeFrequency)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeStart)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeEnd))"
+        cell.textLabel?.text = "Route Id: \(self.tblIdArray[indexPath.row]) \nRoute Name: \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeName)) \nRoute Price: \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routePrice.currency())) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeId)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeColor)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeFrequency)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeStart)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeEnd))"
         cell.tag = indexPath.row
-        cell.textLabel?.numberOfLines = 12
+        cell.textLabel?.numberOfLines = 8
         print(" table cells load")
         return cell
     }
