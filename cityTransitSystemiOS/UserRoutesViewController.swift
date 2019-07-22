@@ -21,7 +21,6 @@ class UserRoutesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewDidLoad()
         //getting database reference
         self.ref = Database.database().reference()
         //to make tables active -almost forgot this-
