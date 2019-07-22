@@ -31,6 +31,7 @@
 		4C65238122E40576008729CD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65238022E40576008729CD /* HelpViewController.swift */; };
 		4C65238322E40907008729CD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C65238222E40907008729CD /* WebKit.framework */; };
 		4C65238522E5BDA9008729CD /* Extension_Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65238422E5BDA9008729CD /* Extension_Int.swift */; };
+		4C65238722E5D55B008729CD /* AddNewRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65238622E5D55B008729CD /* AddNewRoutesViewController.swift */; };
 		4C69707222D5BF4D00964A29 /* Extension_GifSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69707122D5BF4D00964A29 /* Extension_GifSwift.swift */; };
 		4C69707422D5C00E00964A29 /* stars.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707322D5C00D00964A29 /* stars.gif */; };
 		4C69707A22D5C11B00964A29 /* strom.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4C69707522D5C11A00964A29 /* strom.gif */; };
@@ -77,6 +78,7 @@
 		4C65238022E40576008729CD /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4C65238222E40907008729CD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		4C65238422E5BDA9008729CD /* Extension_Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_Int.swift; sourceTree = "<group>"; };
+		4C65238622E5D55B008729CD /* AddNewRoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewRoutesViewController.swift; sourceTree = "<group>"; };
 		4C69707122D5BF4D00964A29 /* Extension_GifSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_GifSwift.swift; sourceTree = "<group>"; };
 		4C69707322D5C00D00964A29 /* stars.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = stars.gif; sourceTree = "<group>"; };
 		4C69707522D5C11A00964A29 /* strom.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = strom.gif; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				4CD4C70522DF8B4B00BF7F97 /* UserRoutesViewController.swift */,
 				4CD4C70722DF8B5A00BF7F97 /* UserCardsViewController.swift */,
 				4C69708022D5EC9D00964A29 /* AdminPostLoginFlow.storyboard */,
+				4C65238622E5D55B008729CD /* AddNewRoutesViewController.swift */,
 				4C69708422D6084E00964A29 /* AdminRoutesViewController.swift */,
 				4C69708622D6085D00964A29 /* AdminDriversViewController.swift */,
 				4C69708222D5ECB500964A29 /* AdminHomeViewController.swift */,
@@ -368,6 +371,7 @@
 				4C26977A22C99AF300E83643 /* RoutesViewController.swift in Sources */,
 				4C26977E22C99C9700E83643 /* SignUpViewController.swift in Sources */,
 				4C69708322D5ECB500964A29 /* AdminHomeViewController.swift in Sources */,
+				4C65238722E5D55B008729CD /* AddNewRoutesViewController.swift in Sources */,
 				4C65238522E5BDA9008729CD /* Extension_Int.swift in Sources */,
 				4C26979622CA087F00E83643 /* UserHomeViewController.swift in Sources */,
 				4C26978722C9E8F900E83643 /* UserSingleton.swift in Sources */,

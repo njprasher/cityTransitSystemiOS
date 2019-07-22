@@ -80,7 +80,7 @@
         <!--Routes-->
         <scene sceneID="be8-lu-BXE">
             <objects>
-                <viewController id="ILa-vn-omr" customClass="AdminRoutesViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminRoutes" id="ILa-vn-omr" customClass="AdminRoutesViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIO-20-4YI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,11 @@
                                                 <action selector="btnShowEditing:" destination="ILa-vn-omr" id="r8Q-4h-lhg"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sdj-DM-JMT"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sdj-DM-JMT">
+                                            <connections>
+                                                <segue destination="35B-TE-Vte" kind="show" identifier="saveRouteS" id="DjB-Jw-RDU"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -127,6 +131,149 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OoY-0L-Rxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2386.9565217391305" y="53.571428571428569"/>
+        </scene>
+        <!--AddNewRoutesVC-->
+        <scene sceneID="TN1-8l-lOB">
+            <objects>
+                <viewController storyboardIdentifier="AddRoutes" title="AddNewRoutesVC" id="35B-TE-Vte" customClass="AddNewRoutesViewController" customModule="cityTransitSystemiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EDc-qi-eYF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nS5-eI-atW">
+                                <rect key="frame" x="10" y="104" width="394" height="481.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1j-HQ-AvT">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2XV-oA-PLQ">
+                                        <rect key="frame" x="0.0" y="30.5" width="394" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOp-Le-gm7">
+                                        <rect key="frame" x="0.0" y="70.5" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXO-ER-9gE">
+                                        <rect key="frame" x="0.0" y="101" width="394" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rg-2d-AAH">
+                                        <rect key="frame" x="0.0" y="141" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Fr-4Y-FVW">
+                                        <rect key="frame" x="0.0" y="171.5" width="394" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VP6-Mb-lKI">
+                                        <rect key="frame" x="0.0" y="211.5" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vfy-qB-Ji6">
+                                        <rect key="frame" x="0.0" y="242" width="394" height="29"/>
+                                        <segments>
+                                            <segment title="Red"/>
+                                            <segment title="Blue"/>
+                                            <segment title="Green"/>
+                                            <segment title="Yellow"/>
+                                            <segment title="Orange"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJ1-B0-LJX">
+                                        <rect key="frame" x="0.0" y="280" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjI-f1-dgS">
+                                        <rect key="frame" x="0.0" y="310.5" width="394" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxE-eb-srY">
+                                        <rect key="frame" x="0.0" y="350.5" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wTZ-0C-8nQ">
+                                        <rect key="frame" x="0.0" y="381" width="394" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route End" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rp6-CA-A9p">
+                                        <rect key="frame" x="0.0" y="421" width="394" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2CY-9b-wDN">
+                                        <rect key="frame" x="0.0" y="451.5" width="394" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-lD-zLY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add Route" id="ekO-Sn-FNQ">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="H51-Xp-EMn">
+                                            <connections>
+                                                <action selector="btnCancel:" destination="35B-TE-Vte" id="rZT-bU-CN1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="Jik-zH-RgE">
+                                            <connections>
+                                                <action selector="btnSave:" destination="35B-TE-Vte" id="sCh-PN-zah"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nS5-eI-atW" firstAttribute="leading" secondItem="fs9-fH-8K3" secondAttribute="leading" constant="10" id="Jww-La-f7w"/>
+                            <constraint firstItem="nS5-eI-atW" firstAttribute="top" secondItem="fs9-fH-8K3" secondAttribute="top" constant="60" id="R8h-FT-ind"/>
+                            <constraint firstItem="fs9-fH-8K3" firstAttribute="trailing" secondItem="nS5-eI-atW" secondAttribute="trailing" constant="10" id="bka-5n-J8x"/>
+                            <constraint firstItem="nS5-eI-atW" firstAttribute="centerX" secondItem="EDc-qi-eYF" secondAttribute="centerX" id="rYo-GD-A0O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fs9-fH-8K3"/>
+                    </view>
+                    <connections>
+                        <outlet property="segmentColor" destination="Vfy-qB-Ji6" id="x7F-b1-cbI"/>
+                        <outlet property="txtRouteEnd" destination="2CY-9b-wDN" id="DZv-Rj-DP8"/>
+                        <outlet property="txtRouteFrequency" destination="6Fr-4Y-FVW" id="XBD-j9-1zq"/>
+                        <outlet property="txtRouteId" destination="2XV-oA-PLQ" id="HLs-6c-ely"/>
+                        <outlet property="txtRouteName" destination="ZXO-ER-9gE" id="l0O-OB-Nc5"/>
+                        <outlet property="txtRoutePrice" destination="mjI-f1-dgS" id="qeo-6S-27N"/>
+                        <outlet property="txtRouteStart" destination="wTZ-0C-8nQ" id="VEt-8W-2ph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6U-V3-h3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3310" y="54"/>
         </scene>
         <!--AdminHomeVC-->
         <scene sceneID="wul-55-2K7">
