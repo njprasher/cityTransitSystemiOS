@@ -38,12 +38,12 @@ class RoutesViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let value = thisRoute.value as? NSDictionary
                 let routeName = value?["routeName"]  as? String ?? "not found"
                 let routeColor = value?["routeColor"]  as? String ?? "not found"
-                let routeId = value?["routeId"]  as? String ?? "not found"
+                let routeId = value?["routeId"]  as? Int ?? Int(404)
                 let routeStart = value?["routeStart"]  as? String ?? "not found"
                 let routeEnd = value?["routeEnd"]  as? String ?? "not found"
                 let routeFrequency = value?["routeFrequency"]  as? Int ?? Int(404)
                 let routePrice = value?["routePrice"]  as? NSNumber ?? NSNumber(40.4)
-                let r1 = Routes(routeName: routeName, routeId: routeId, routeStart: routeStart, routeEnd: routeEnd, routePrice: Float(truncating: routePrice), routeFrequency: routeFrequency, routeColor: RouteColor(rawValue: routeColor) ?? RouteColor.white)
+                let r1 = Routes(routeName: routeName, routeId: String(routeId), routeStart: routeStart, routeEnd: routeEnd, routePrice: Float(truncating: routePrice), routeFrequency: routeFrequency, routeColor: RouteColor(rawValue: routeColor) ?? RouteColor.white)
                 self.routesDict[thisRoute.key] =  r1
             }
             
@@ -66,9 +66,24 @@ class RoutesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "routesCell")  as! UITableViewCell
-        cell.textLabel?.text = "Route Id: \(self.tblIdArray[indexPath.row]) \nRoute Name: \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeName)) \nRoute Price: \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routePrice.currency())) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeId)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeColor)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeFrequency)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeStart)) \n \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeEnd))"
+        cell.textLabel?.text = "Route Id:  \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeId))  \nRoute Name: \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeName)) \nRoute Price: \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routePrice.currency())) \nRoute Frequency: \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeFrequency.minutes())) \nRoute Start: \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeStart)) \nRoute End: \(String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeEnd))"
         cell.tag = indexPath.row
         cell.textLabel?.numberOfLines = 8
+        let color = String(describing: self.routesDict[self.tblIdArray[indexPath.row]]!.routeColor)
+        switch color {
+        case "orange":
+            cell.backgroundColor = UIColor.orange
+        case "red":
+            cell.backgroundColor = UIColor.red
+        case "green":
+            cell.backgroundColor = UIColor.green
+        case "yellow":
+            cell.backgroundColor = UIColor.yellow
+        case "blue":
+            cell.backgroundColor = UIColor.blue
+        default:
+            cell.backgroundColor = UIColor.white
+        }
         print(" table cells load")
         return cell
     }

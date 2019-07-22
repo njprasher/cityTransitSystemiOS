@@ -9,11 +9,11 @@
 import Foundation
 
 enum RouteColor : String{
-    case Red = "Red"
-    case Green = "Green"
-    case Blue = "Blue"
-    case Orange = "Orange"
-    case Yellow = "Yellow"
+    case red = "red"
+    case green = "green"
+    case blue = "blue"
+    case orange = "orange"
+    case yellow = "yellow"
     case white = "white"
 }
 
