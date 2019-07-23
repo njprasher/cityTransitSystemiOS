@@ -473,6 +473,10 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card-icon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hcO-js-K2q">
+                                <rect key="frame" x="34" y="205" width="47" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -502,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iTQ-vw-6xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2900" y="1036.6071428571429"/>
+            <point key="canvasLocation" x="2898.5507246376815" y="1036.6071428571429"/>
         </scene>
         <!--Load Card-->
         <scene sceneID="JLa-pY-QcU">
@@ -616,6 +620,7 @@
     </scenes>
     <resources>
         <image name="card-29x29.png" width="29" height="29"/>
+        <image name="card-icon.jpg" width="243" height="148"/>
         <image name="profile-29x29.png" width="29" height="29"/>
         <image name="route-29x29.png" width="29" height="29"/>
     </resources>

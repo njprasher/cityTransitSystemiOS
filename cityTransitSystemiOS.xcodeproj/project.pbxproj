@@ -49,6 +49,7 @@
 		4C69709622D6149D00964A29 /* drivers-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C69709522D6149D00964A29 /* drivers-29x29@3x.png */; };
 		4C69709822D614E200964A29 /* profile-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C69709722D614E200964A29 /* profile-29x29@3x.png */; };
 		4C69709C22D6166300964A29 /* route-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C69709B22D6166200964A29 /* route-29x29@3x.png */; };
+		4CAC323F22E7BDDF00D99383 /* card-icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CAC323E22E7BDDE00D99383 /* card-icon.jpg */; };
 		4CD4C70622DF8B4B00BF7F97 /* UserRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4C70522DF8B4B00BF7F97 /* UserRoutesViewController.swift */; };
 		4CD4C70822DF8B5A00BF7F97 /* UserCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4C70722DF8B5A00BF7F97 /* UserCardsViewController.swift */; };
 		4CD4C70A22DF8F3500BF7F97 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD4C70922DF8F3500BF7F97 /* EditProfileViewController.swift */; };
@@ -100,6 +101,7 @@
 		4C69709522D6149D00964A29 /* drivers-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drivers-29x29@3x.png"; sourceTree = "<group>"; };
 		4C69709722D614E200964A29 /* profile-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-29x29@3x.png"; sourceTree = "<group>"; };
 		4C69709B22D6166200964A29 /* route-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "route-29x29@3x.png"; sourceTree = "<group>"; };
+		4CAC323E22E7BDDE00D99383 /* card-icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "card-icon.jpg"; sourceTree = "<group>"; };
 		4CD4C70522DF8B4B00BF7F97 /* UserRoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoutesViewController.swift; sourceTree = "<group>"; };
 		4CD4C70722DF8B5A00BF7F97 /* UserCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardsViewController.swift; sourceTree = "<group>"; };
 		4CD4C70922DF8F3500BF7F97 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				4C69709722D614E200964A29 /* profile-29x29@3x.png */,
 				4C69709B22D6166200964A29 /* route-29x29@3x.png */,
 				4C0C7FBD22D696EC00E8DC5C /* card-29x29@3x.png */,
+				4CAC323E22E7BDDE00D99383 /* card-icon.jpg */,
 			);
 			path = icons;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CAC323F22E7BDDF00D99383 /* card-icon.jpg in Resources */,
 				4C35F32422C8751B0078460E /* LaunchScreen.storyboard in Resources */,
 				4C26979422CA066600E83643 /* PostLoginFlow.storyboard in Resources */,
 				4C69707E22D5C11B00964A29 /* snowman.gif in Resources */,
