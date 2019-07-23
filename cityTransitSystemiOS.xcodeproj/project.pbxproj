@@ -27,6 +27,9 @@
 		4C35F31F22C8751A0078460E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F31D22C8751A0078460E /* Main.storyboard */; };
 		4C35F32122C8751B0078460E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F32022C8751B0078460E /* Assets.xcassets */; };
 		4C35F32422C8751B0078460E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C35F32222C8751B0078460E /* LaunchScreen.storyboard */; };
+		4C3F1C3322E6E72A004057DC /* AdminHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1C3222E6E72A004057DC /* AdminHelpViewController.swift */; };
+		4C3F1C3522E6E8CB004057DC /* AdminChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1C3422E6E8CB004057DC /* AdminChangePasswordViewController.swift */; };
+		4C3F1C3722E6E8E7004057DC /* AdminAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1C3622E6E8E7004057DC /* AdminAboutUsViewController.swift */; };
 		4C65237D22E40487008729CD /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65237C22E40487008729CD /* AboutUsViewController.swift */; };
 		4C65238122E40576008729CD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65238022E40576008729CD /* HelpViewController.swift */; };
 		4C65238322E40907008729CD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C65238222E40907008729CD /* WebKit.framework */; };
@@ -74,6 +77,9 @@
 		4C35F32022C8751B0078460E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C35F32322C8751B0078460E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C35F32522C8751B0078460E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C3F1C3222E6E72A004057DC /* AdminHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHelpViewController.swift; sourceTree = "<group>"; };
+		4C3F1C3422E6E8CB004057DC /* AdminChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminChangePasswordViewController.swift; sourceTree = "<group>"; };
+		4C3F1C3622E6E8E7004057DC /* AdminAboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAboutUsViewController.swift; sourceTree = "<group>"; };
 		4C65237C22E40487008729CD /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		4C65238022E40576008729CD /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4C65238222E40907008729CD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -189,6 +195,9 @@
 				4CD4C70522DF8B4B00BF7F97 /* UserRoutesViewController.swift */,
 				4CD4C70722DF8B5A00BF7F97 /* UserCardsViewController.swift */,
 				4C69708022D5EC9D00964A29 /* AdminPostLoginFlow.storyboard */,
+				4C3F1C3222E6E72A004057DC /* AdminHelpViewController.swift */,
+				4C3F1C3422E6E8CB004057DC /* AdminChangePasswordViewController.swift */,
+				4C3F1C3622E6E8E7004057DC /* AdminAboutUsViewController.swift */,
 				4C65238622E5D55B008729CD /* AddNewRoutesViewController.swift */,
 				4C69708422D6084E00964A29 /* AdminRoutesViewController.swift */,
 				4C69708622D6085D00964A29 /* AdminDriversViewController.swift */,
@@ -358,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C26978A22C9EAA300E83643 /* Users.swift in Sources */,
+				4C3F1C3322E6E72A004057DC /* AdminHelpViewController.swift in Sources */,
 				4CD4C70822DF8B5A00BF7F97 /* UserCardsViewController.swift in Sources */,
 				4C26979222C9F30300E83643 /* Routes.swift in Sources */,
 				4C26978C22C9EAF800E83643 /* Admin.swift in Sources */,
@@ -365,6 +375,8 @@
 				4C26978E22C9EB2B00E83643 /* Riders.swift in Sources */,
 				4C69708522D6084E00964A29 /* AdminRoutesViewController.swift in Sources */,
 				4C69707222D5BF4D00964A29 /* Extension_GifSwift.swift in Sources */,
+				4C3F1C3522E6E8CB004057DC /* AdminChangePasswordViewController.swift in Sources */,
+				4C3F1C3722E6E8E7004057DC /* AdminAboutUsViewController.swift in Sources */,
 				4C26978322C9B69500E83643 /* Extension_Float.swift in Sources */,
 				4CD4C70A22DF8F3500BF7F97 /* EditProfileViewController.swift in Sources */,
 				4C26977C22C99C8C00E83643 /* LoginViewController.swift in Sources */,
