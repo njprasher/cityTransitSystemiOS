@@ -30,6 +30,7 @@
 		4C3F1C3322E6E72A004057DC /* AdminHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1C3222E6E72A004057DC /* AdminHelpViewController.swift */; };
 		4C3F1C3522E6E8CB004057DC /* AdminChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1C3422E6E8CB004057DC /* AdminChangePasswordViewController.swift */; };
 		4C3F1C3722E6E8E7004057DC /* AdminAboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1C3622E6E8E7004057DC /* AdminAboutUsViewController.swift */; };
+		4C3F1C3922E6F45A004057DC /* UserLoadCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1C3822E6F45A004057DC /* UserLoadCardViewController.swift */; };
 		4C65237D22E40487008729CD /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65237C22E40487008729CD /* AboutUsViewController.swift */; };
 		4C65238122E40576008729CD /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C65238022E40576008729CD /* HelpViewController.swift */; };
 		4C65238322E40907008729CD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C65238222E40907008729CD /* WebKit.framework */; };
@@ -80,6 +81,7 @@
 		4C3F1C3222E6E72A004057DC /* AdminHelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHelpViewController.swift; sourceTree = "<group>"; };
 		4C3F1C3422E6E8CB004057DC /* AdminChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminChangePasswordViewController.swift; sourceTree = "<group>"; };
 		4C3F1C3622E6E8E7004057DC /* AdminAboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAboutUsViewController.swift; sourceTree = "<group>"; };
+		4C3F1C3822E6F45A004057DC /* UserLoadCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoadCardViewController.swift; sourceTree = "<group>"; };
 		4C65237C22E40487008729CD /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		4C65238022E40576008729CD /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4C65238222E40907008729CD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -194,6 +196,7 @@
 				4C65237C22E40487008729CD /* AboutUsViewController.swift */,
 				4CD4C70522DF8B4B00BF7F97 /* UserRoutesViewController.swift */,
 				4CD4C70722DF8B5A00BF7F97 /* UserCardsViewController.swift */,
+				4C3F1C3822E6F45A004057DC /* UserLoadCardViewController.swift */,
 				4C69708022D5EC9D00964A29 /* AdminPostLoginFlow.storyboard */,
 				4C3F1C3222E6E72A004057DC /* AdminHelpViewController.swift */,
 				4C3F1C3422E6E8CB004057DC /* AdminChangePasswordViewController.swift */,
@@ -384,6 +387,7 @@
 				4C26977E22C99C9700E83643 /* SignUpViewController.swift in Sources */,
 				4C69708322D5ECB500964A29 /* AdminHomeViewController.swift in Sources */,
 				4C65238722E5D55B008729CD /* AddNewRoutesViewController.swift in Sources */,
+				4C3F1C3922E6F45A004057DC /* UserLoadCardViewController.swift in Sources */,
 				4C65238522E5BDA9008729CD /* Extension_Int.swift in Sources */,
 				4C26979622CA087F00E83643 /* UserHomeViewController.swift in Sources */,
 				4C26978722C9E8F900E83643 /* UserSingleton.swift in Sources */,

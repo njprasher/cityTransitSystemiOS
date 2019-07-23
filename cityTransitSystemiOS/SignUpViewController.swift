@@ -387,6 +387,10 @@ class SignUpViewController: UIViewController {
                     self.ref.child("riders").child(user.uid).child("dateOfBirth").setValue(self.txtDateOfBirth.text)
                     self.ref.child("riders").child(user.uid).child("contact").setValue(self.txtContact.text)
                     self.ref.child("riders").child(user.uid).child("email").setValue(user.email)
+                   
+                    let randomCardNumber = Int.random(in: 1000000000000000...9999999999999999)
+                    self.ref.child("riders").child(user.uid).child("card").child("cardNumber").setValue(randomCardNumber)
+                    self.ref.child("riders").child(user.uid).child("card").child("cardBalance").setValue(0.0)
                 }
                 
                 //showing alerts
