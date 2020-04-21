@@ -1,2 +1,2 @@
 # cityTransitSystemiOS
-/cityTransitSystemiOS.pdf
+(/cityTransitSystemiOS.pdf)
